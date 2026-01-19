@@ -1,0 +1,15 @@
+C:\.NET\TopBrains\BankingTransactionModule\obj\Debug\net10.0\BankingTransactionModule.GeneratedMSBuildEditorConfig.editorconfig
+C:\.NET\TopBrains\BankingTransactionModule\obj\Debug\net10.0\BankingTransactionModule.AssemblyInfoInputs.cache
+C:\.NET\TopBrains\BankingTransactionModule\obj\Debug\net10.0\BankingTransactionModule.AssemblyInfo.cs
+C:\.NET\TopBrains\BankingTransactionModule\obj\Debug\net10.0\BankingTransactionModule.csproj.CoreCompileInputs.cache
+C:\.NET\TopBrains\BankingTransactionModule\obj\Debug\net10.0\BankingTransactionModule.sourcelink.json
+C:\.NET\TopBrains\BankingTransactionModule\bin\Debug\net10.0\BankingTransactionModule.exe
+C:\.NET\TopBrains\BankingTransactionModule\bin\Debug\net10.0\BankingTransactionModule.deps.json
+C:\.NET\TopBrains\BankingTransactionModule\bin\Debug\net10.0\BankingTransactionModule.runtimeconfig.json
+C:\.NET\TopBrains\BankingTransactionModule\bin\Debug\net10.0\BankingTransactionModule.dll
+C:\.NET\TopBrains\BankingTransactionModule\bin\Debug\net10.0\BankingTransactionModule.pdb
+C:\.NET\TopBrains\BankingTransactionModule\obj\Debug\net10.0\BankingTransactionModule.dll
+C:\.NET\TopBrains\BankingTransactionModule\obj\Debug\net10.0\refint\BankingTransactionModule.dll
+C:\.NET\TopBrains\BankingTransactionModule\obj\Debug\net10.0\BankingTransactionModule.pdb
+C:\.NET\TopBrains\BankingTransactionModule\obj\Debug\net10.0\BankingTransactionModule.genruntimeconfig.cache
+C:\.NET\TopBrains\BankingTransactionModule\obj\Debug\net10.0\ref\BankingTransactionModule.dll
