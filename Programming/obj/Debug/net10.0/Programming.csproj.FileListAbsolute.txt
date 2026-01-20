@@ -1,0 +1,15 @@
+C:\TopBrains\Programming\bin\Debug\net10.0\Programming.exe
+C:\TopBrains\Programming\bin\Debug\net10.0\Programming.deps.json
+C:\TopBrains\Programming\bin\Debug\net10.0\Programming.runtimeconfig.json
+C:\TopBrains\Programming\bin\Debug\net10.0\Programming.dll
+C:\TopBrains\Programming\bin\Debug\net10.0\Programming.pdb
+C:\TopBrains\Programming\obj\Debug\net10.0\Programming.GeneratedMSBuildEditorConfig.editorconfig
+C:\TopBrains\Programming\obj\Debug\net10.0\Programming.AssemblyInfoInputs.cache
+C:\TopBrains\Programming\obj\Debug\net10.0\Programming.AssemblyInfo.cs
+C:\TopBrains\Programming\obj\Debug\net10.0\Programming.csproj.CoreCompileInputs.cache
+C:\TopBrains\Programming\obj\Debug\net10.0\Programming.sourcelink.json
+C:\TopBrains\Programming\obj\Debug\net10.0\Programming.dll
+C:\TopBrains\Programming\obj\Debug\net10.0\refint\Programming.dll
+C:\TopBrains\Programming\obj\Debug\net10.0\Programming.pdb
+C:\TopBrains\Programming\obj\Debug\net10.0\Programming.genruntimeconfig.cache
+C:\TopBrains\Programming\obj\Debug\net10.0\ref\Programming.dll
