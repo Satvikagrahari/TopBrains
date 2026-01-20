@@ -41,7 +41,5 @@ class Program
             }
         }
         System.Console.WriteLine(count);      
-
-
     }
 }
