@@ -1,0 +1,15 @@
+C:\TopBrains\18_ObjectArray\bin\Debug\net10.0\18_ObjectArray.exe
+C:\TopBrains\18_ObjectArray\bin\Debug\net10.0\18_ObjectArray.deps.json
+C:\TopBrains\18_ObjectArray\bin\Debug\net10.0\18_ObjectArray.runtimeconfig.json
+C:\TopBrains\18_ObjectArray\bin\Debug\net10.0\18_ObjectArray.dll
+C:\TopBrains\18_ObjectArray\bin\Debug\net10.0\18_ObjectArray.pdb
+C:\TopBrains\18_ObjectArray\obj\Debug\net10.0\18_ObjectArray.GeneratedMSBuildEditorConfig.editorconfig
+C:\TopBrains\18_ObjectArray\obj\Debug\net10.0\18_ObjectArray.AssemblyInfoInputs.cache
+C:\TopBrains\18_ObjectArray\obj\Debug\net10.0\18_ObjectArray.AssemblyInfo.cs
+C:\TopBrains\18_ObjectArray\obj\Debug\net10.0\18_ObjectArray.csproj.CoreCompileInputs.cache
+C:\TopBrains\18_ObjectArray\obj\Debug\net10.0\18_ObjectArray.sourcelink.json
+C:\TopBrains\18_ObjectArray\obj\Debug\net10.0\18_ObjectArray.dll
+C:\TopBrains\18_ObjectArray\obj\Debug\net10.0\refint\18_ObjectArray.dll
+C:\TopBrains\18_ObjectArray\obj\Debug\net10.0\18_ObjectArray.pdb
+C:\TopBrains\18_ObjectArray\obj\Debug\net10.0\18_ObjectArray.genruntimeconfig.cache
+C:\TopBrains\18_ObjectArray\obj\Debug\net10.0\ref\18_ObjectArray.dll
