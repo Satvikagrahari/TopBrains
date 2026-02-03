@@ -1,0 +1,15 @@
+C:\TopBrains\17_Bank_transaction_program\bin\Debug\net10.0\17_Bank_transaction_program.exe
+C:\TopBrains\17_Bank_transaction_program\bin\Debug\net10.0\17_Bank_transaction_program.deps.json
+C:\TopBrains\17_Bank_transaction_program\bin\Debug\net10.0\17_Bank_transaction_program.runtimeconfig.json
+C:\TopBrains\17_Bank_transaction_program\bin\Debug\net10.0\17_Bank_transaction_program.dll
+C:\TopBrains\17_Bank_transaction_program\bin\Debug\net10.0\17_Bank_transaction_program.pdb
+C:\TopBrains\17_Bank_transaction_program\obj\Debug\net10.0\17_Bank_transaction_program.GeneratedMSBuildEditorConfig.editorconfig
+C:\TopBrains\17_Bank_transaction_program\obj\Debug\net10.0\17_Bank_transaction_program.AssemblyInfoInputs.cache
+C:\TopBrains\17_Bank_transaction_program\obj\Debug\net10.0\17_Bank_transaction_program.AssemblyInfo.cs
+C:\TopBrains\17_Bank_transaction_program\obj\Debug\net10.0\17_Bank_transaction_program.csproj.CoreCompileInputs.cache
+C:\TopBrains\17_Bank_transaction_program\obj\Debug\net10.0\17_Bank_transaction_program.sourcelink.json
+C:\TopBrains\17_Bank_transaction_program\obj\Debug\net10.0\17_Bank_transaction_program.dll
+C:\TopBrains\17_Bank_transaction_program\obj\Debug\net10.0\refint\17_Bank_transaction_program.dll
+C:\TopBrains\17_Bank_transaction_program\obj\Debug\net10.0\17_Bank_transaction_program.pdb
+C:\TopBrains\17_Bank_transaction_program\obj\Debug\net10.0\17_Bank_transaction_program.genruntimeconfig.cache
+C:\TopBrains\17_Bank_transaction_program\obj\Debug\net10.0\ref\17_Bank_transaction_program.dll
