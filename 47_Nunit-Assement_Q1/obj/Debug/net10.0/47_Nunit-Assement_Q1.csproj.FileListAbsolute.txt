@@ -1,0 +1,5 @@
+C:\TopBrains\47_Nunit-Assement_Q1\obj\Debug\net10.0\47_Nunit-Assement_Q1.GeneratedMSBuildEditorConfig.editorconfig
+C:\TopBrains\47_Nunit-Assement_Q1\obj\Debug\net10.0\47_Nunit-Assement_Q1.AssemblyInfoInputs.cache
+C:\TopBrains\47_Nunit-Assement_Q1\obj\Debug\net10.0\47_Nunit-Assement_Q1.AssemblyInfo.cs
+C:\TopBrains\47_Nunit-Assement_Q1\obj\Debug\net10.0\47_Nunit-Assement_Q1.csproj.CoreCompileInputs.cache
+C:\TopBrains\47_Nunit-Assement_Q1\obj\Debug\net10.0\47_Nunit-Assement_Q1.sourcelink.json
