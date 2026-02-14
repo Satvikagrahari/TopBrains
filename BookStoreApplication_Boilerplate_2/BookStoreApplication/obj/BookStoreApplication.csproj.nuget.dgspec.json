@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\TopBrains\\BankingTransactionModule\\BankingTransactionModule.csproj": {}
+    "C:\\BookStoreApplication_Boilerplate_2\\BookStoreApplication\\BookStoreApplication.csproj": {}
   },
   "projects": {
-    "C:\\TopBrains\\BankingTransactionModule\\BankingTransactionModule.csproj": {
+    "C:\\BookStoreApplication_Boilerplate_2\\BookStoreApplication\\BookStoreApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\TopBrains\\BankingTransactionModule\\BankingTransactionModule.csproj",
-        "projectName": "BankingTransactionModule",
-        "projectPath": "C:\\TopBrains\\BankingTransactionModule\\BankingTransactionModule.csproj",
+        "projectUniqueName": "C:\\BookStoreApplication_Boilerplate_2\\BookStoreApplication\\BookStoreApplication.csproj",
+        "projectName": "BookStoreApplication",
+        "projectPath": "C:\\BookStoreApplication_Boilerplate_2\\BookStoreApplication\\BookStoreApplication.csproj",
         "packagesPath": "C:\\Users\\Satvik Agrahari\\.nuget\\packages\\",
-        "outputPath": "C:\\TopBrains\\BankingTransactionModule\\obj\\",
+        "outputPath": "C:\\BookStoreApplication_Boilerplate_2\\BookStoreApplication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
