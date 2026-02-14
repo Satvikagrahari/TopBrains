@@ -1,0 +1,15 @@
+C:\TopBrains\ITGiene\bin\Debug\net10.0\ITGiene.exe
+C:\TopBrains\ITGiene\bin\Debug\net10.0\ITGiene.deps.json
+C:\TopBrains\ITGiene\bin\Debug\net10.0\ITGiene.runtimeconfig.json
+C:\TopBrains\ITGiene\bin\Debug\net10.0\ITGiene.dll
+C:\TopBrains\ITGiene\bin\Debug\net10.0\ITGiene.pdb
+C:\TopBrains\ITGiene\obj\Debug\net10.0\ITGiene.GeneratedMSBuildEditorConfig.editorconfig
+C:\TopBrains\ITGiene\obj\Debug\net10.0\ITGiene.AssemblyInfoInputs.cache
+C:\TopBrains\ITGiene\obj\Debug\net10.0\ITGiene.AssemblyInfo.cs
+C:\TopBrains\ITGiene\obj\Debug\net10.0\ITGiene.csproj.CoreCompileInputs.cache
+C:\TopBrains\ITGiene\obj\Debug\net10.0\ITGiene.sourcelink.json
+C:\TopBrains\ITGiene\obj\Debug\net10.0\ITGiene.dll
+C:\TopBrains\ITGiene\obj\Debug\net10.0\refint\ITGiene.dll
+C:\TopBrains\ITGiene\obj\Debug\net10.0\ITGiene.pdb
+C:\TopBrains\ITGiene\obj\Debug\net10.0\ITGiene.genruntimeconfig.cache
+C:\TopBrains\ITGiene\obj\Debug\net10.0\ref\ITGiene.dll
