@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "UniversityCourseRegistrationSystem/1.0.0": {
+        "runtime": {
+          "UniversityCourseRegistrationSystem.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UniversityCourseRegistrationSystem/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

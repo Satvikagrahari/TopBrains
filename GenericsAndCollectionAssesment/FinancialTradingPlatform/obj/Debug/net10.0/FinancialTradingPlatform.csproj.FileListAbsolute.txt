@@ -1,0 +1,15 @@
+C:\TopBrains\GenericsAndCollectionAssesment\FinancialTradingPlatform\bin\Debug\net10.0\FinancialTradingPlatform.exe
+C:\TopBrains\GenericsAndCollectionAssesment\FinancialTradingPlatform\bin\Debug\net10.0\FinancialTradingPlatform.deps.json
+C:\TopBrains\GenericsAndCollectionAssesment\FinancialTradingPlatform\bin\Debug\net10.0\FinancialTradingPlatform.runtimeconfig.json
+C:\TopBrains\GenericsAndCollectionAssesment\FinancialTradingPlatform\bin\Debug\net10.0\FinancialTradingPlatform.dll
+C:\TopBrains\GenericsAndCollectionAssesment\FinancialTradingPlatform\bin\Debug\net10.0\FinancialTradingPlatform.pdb
+C:\TopBrains\GenericsAndCollectionAssesment\FinancialTradingPlatform\obj\Debug\net10.0\FinancialTradingPlatform.GeneratedMSBuildEditorConfig.editorconfig
+C:\TopBrains\GenericsAndCollectionAssesment\FinancialTradingPlatform\obj\Debug\net10.0\FinancialTradingPlatform.AssemblyInfoInputs.cache
+C:\TopBrains\GenericsAndCollectionAssesment\FinancialTradingPlatform\obj\Debug\net10.0\FinancialTradingPlatform.AssemblyInfo.cs
+C:\TopBrains\GenericsAndCollectionAssesment\FinancialTradingPlatform\obj\Debug\net10.0\FinancialTradingPlatform.csproj.CoreCompileInputs.cache
+C:\TopBrains\GenericsAndCollectionAssesment\FinancialTradingPlatform\obj\Debug\net10.0\FinancialTradingPlatform.sourcelink.json
+C:\TopBrains\GenericsAndCollectionAssesment\FinancialTradingPlatform\obj\Debug\net10.0\FinancialTradingPlatform.dll
+C:\TopBrains\GenericsAndCollectionAssesment\FinancialTradingPlatform\obj\Debug\net10.0\refint\FinancialTradingPlatform.dll
+C:\TopBrains\GenericsAndCollectionAssesment\FinancialTradingPlatform\obj\Debug\net10.0\FinancialTradingPlatform.pdb
+C:\TopBrains\GenericsAndCollectionAssesment\FinancialTradingPlatform\obj\Debug\net10.0\FinancialTradingPlatform.genruntimeconfig.cache
+C:\TopBrains\GenericsAndCollectionAssesment\FinancialTradingPlatform\obj\Debug\net10.0\ref\FinancialTradingPlatform.dll
