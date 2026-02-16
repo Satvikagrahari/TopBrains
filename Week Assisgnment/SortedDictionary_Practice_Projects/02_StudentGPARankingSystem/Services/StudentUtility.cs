@@ -7,13 +7,28 @@ namespace Services
     public class StudentUtility
     {
         private SortedDictionary<double, List<Student>> _data
-            = new SortedDictionary<double, List<Student>>();
+            = new SortedDictionary<double, List<Student>>(Comparer<double>.Create((x,y) => y.CompareTo(x)));
 
         public void AddStudent(Student student)
         {
             // TODO: Validate entity
             // TODO: Handle duplicate entries
             // TODO: Add entity to SortedDictionary
+            if(student.GPA<0 || student.GPA > 10)
+            {
+                throw new InvalidGPAException("GPA must be 0-10");
+            }
+            foreach (var key in _data.Keys)
+            {
+                var list = _data[key];
+                foreach (var s in list)
+                {
+                    if(s.Id == student.Id)
+                    {
+                        throw new DuplicateStudentException("Duplicate Student");
+                    }
+                }
+            }
 
             if (_data.ContainsKey(student.GPA))
             {
@@ -28,18 +43,31 @@ namespace Services
         public void UpdateGPA(string id, double GPA)
         {
             // TODO: Update entity logic
-            foreach (var value in _data.Values)
+            if(GPA<0 || GPA > 10)
             {
-                foreach (var Student in value)
-                {
-                    if(Student.Id == id)
-                    {
-                        Student.GPA = GPA;
-                        // Student = GPA;
-                        return;
-                    }
-                }
+                throw new InvalidGPAException("GPA must be 0-10");
             }
+
+            
+            foreach (var key in _data.Keys)
+            {
+                var list = _data[key];
+                foreach (var value in list)
+                {
+                    if(value.Id == id)
+                    {
+                        list.Remove(value);
+                    }
+                    if (list.Count == 0)
+                    {
+                        _data.Remove(key);
+                    }  
+                    value.GPA = GPA;
+                    AddStudent(value);  
+                    return;            
+                }                
+            }
+            throw new StudentNotFoundException("Student not found");
 
         }
 
@@ -53,7 +81,7 @@ namespace Services
                 }
                 System.Console.WriteLine();
             }
-        }
+        } 
 
         
     }

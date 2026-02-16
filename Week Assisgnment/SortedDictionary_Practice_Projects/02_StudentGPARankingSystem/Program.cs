@@ -1,6 +1,7 @@
 using System;
 using Services;
 using Domain;
+using Exceptions;
 using System.ComponentModel;
 
 
@@ -11,8 +12,11 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
             StudentUtility utility = new StudentUtility();
-            
 
+            try
+            {
+                
+            
             while (true)
             {
                 Console.WriteLine("1. Display Ranking");
@@ -63,6 +67,20 @@ namespace ConsoleApp
                         break;
                 }
             }
+            
+            }
+            catch(InvalidGPAException e)
+            {
+                System.Console.WriteLine(e.Message);
+            }
+            catch(StudentNotFoundException e)
+            {
+                System.Console.WriteLine(e.Message);
+            }
+            catch(DuplicateStudentException e)
+            {
+                System.Console.WriteLine(e.Message);
+            }
         }
-    }
+    } 
 }
