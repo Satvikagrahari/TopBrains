@@ -12,7 +12,7 @@ namespace ConsoleApp
         {
            AccountUtility accountUtility = new AccountUtility();
            try
-           {         
+           {       
            
 
             while (true)
@@ -48,8 +48,8 @@ namespace ConsoleApp
 
                         accountUtility.Withdraw(acNo1, amt1);                        
                         break;
-                    case 4:
-                        
+
+                    case 4:                        
                         System.Console.WriteLine("Enter details like {a/cNo. name balance}");
                         string[] input = Console.ReadLine().Split(' ');
                         
@@ -59,6 +59,7 @@ namespace ConsoleApp
                             HolderName = input[1],
                             Balance = decimal.Parse(input[2])
                         };
+                        accountUtility.AddAccount(ac);
                         break;
                     case 5:
                         Console.WriteLine("Thank You");
@@ -71,15 +72,15 @@ namespace ConsoleApp
            }
             catch (AccountNotFoundException e)
            {
-                System.Console.WriteLine(e.Message);
+                // System.Console.WriteLine(e.Message);
            }
            catch(NegativeBalanceException e)
             {
-                System.Console.WriteLine(e.Message);
+                // System.Console.WriteLine(e.Message);
             }
             catch(InsufficientFundsException e)
             {
-                System.Console.WriteLine(e.Message);
+                // System.Console.WriteLine(e.Message);
             }
            
         }
