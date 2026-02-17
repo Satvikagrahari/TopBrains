@@ -1,0 +1,15 @@
+C:\TopBrains\ItGieneDictQues\bin\Debug\net10.0\ItGieneDictQues.exe
+C:\TopBrains\ItGieneDictQues\bin\Debug\net10.0\ItGieneDictQues.deps.json
+C:\TopBrains\ItGieneDictQues\bin\Debug\net10.0\ItGieneDictQues.runtimeconfig.json
+C:\TopBrains\ItGieneDictQues\bin\Debug\net10.0\ItGieneDictQues.dll
+C:\TopBrains\ItGieneDictQues\bin\Debug\net10.0\ItGieneDictQues.pdb
+C:\TopBrains\ItGieneDictQues\obj\Debug\net10.0\ItGieneDictQues.GeneratedMSBuildEditorConfig.editorconfig
+C:\TopBrains\ItGieneDictQues\obj\Debug\net10.0\ItGieneDictQues.AssemblyInfoInputs.cache
+C:\TopBrains\ItGieneDictQues\obj\Debug\net10.0\ItGieneDictQues.AssemblyInfo.cs
+C:\TopBrains\ItGieneDictQues\obj\Debug\net10.0\ItGieneDictQues.csproj.CoreCompileInputs.cache
+C:\TopBrains\ItGieneDictQues\obj\Debug\net10.0\ItGieneDictQues.sourcelink.json
+C:\TopBrains\ItGieneDictQues\obj\Debug\net10.0\ItGieneDictQues.dll
+C:\TopBrains\ItGieneDictQues\obj\Debug\net10.0\refint\ItGieneDictQues.dll
+C:\TopBrains\ItGieneDictQues\obj\Debug\net10.0\ItGieneDictQues.pdb
+C:\TopBrains\ItGieneDictQues\obj\Debug\net10.0\ItGieneDictQues.genruntimeconfig.cache
+C:\TopBrains\ItGieneDictQues\obj\Debug\net10.0\ref\ItGieneDictQues.dll
