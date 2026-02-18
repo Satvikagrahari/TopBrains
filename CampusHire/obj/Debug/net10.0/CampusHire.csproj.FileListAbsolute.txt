@@ -1,0 +1,15 @@
+C:\TopBrains\CampusHire\bin\Debug\net10.0\CampusHire.exe
+C:\TopBrains\CampusHire\bin\Debug\net10.0\CampusHire.deps.json
+C:\TopBrains\CampusHire\bin\Debug\net10.0\CampusHire.runtimeconfig.json
+C:\TopBrains\CampusHire\bin\Debug\net10.0\CampusHire.dll
+C:\TopBrains\CampusHire\bin\Debug\net10.0\CampusHire.pdb
+C:\TopBrains\CampusHire\obj\Debug\net10.0\CampusHire.GeneratedMSBuildEditorConfig.editorconfig
+C:\TopBrains\CampusHire\obj\Debug\net10.0\CampusHire.AssemblyInfoInputs.cache
+C:\TopBrains\CampusHire\obj\Debug\net10.0\CampusHire.AssemblyInfo.cs
+C:\TopBrains\CampusHire\obj\Debug\net10.0\CampusHire.csproj.CoreCompileInputs.cache
+C:\TopBrains\CampusHire\obj\Debug\net10.0\CampusHire.sourcelink.json
+C:\TopBrains\CampusHire\obj\Debug\net10.0\CampusHire.dll
+C:\TopBrains\CampusHire\obj\Debug\net10.0\refint\CampusHire.dll
+C:\TopBrains\CampusHire\obj\Debug\net10.0\CampusHire.pdb
+C:\TopBrains\CampusHire\obj\Debug\net10.0\CampusHire.genruntimeconfig.cache
+C:\TopBrains\CampusHire\obj\Debug\net10.0\ref\CampusHire.dll
