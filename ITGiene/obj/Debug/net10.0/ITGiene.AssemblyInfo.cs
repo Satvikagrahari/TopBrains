@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ITGiene")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47033e5bd84914d299a21f8e45781c23d33be0dd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe88dfb681909978670f9408df6e3d31abb2d024")]
 [assembly: System.Reflection.AssemblyProductAttribute("ITGiene")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ITGiene")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

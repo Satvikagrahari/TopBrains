@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 class Program
 {
@@ -122,6 +123,24 @@ class Program
     //     encoded += toencode[n - 1];
     //     encoded += count;
     //     System.Console.WriteLine(encoded);
+
+    // Insert '*' between every two characters.
+    // string input = "ascdddcj";
+    // StringBuilder sb = new StringBuilder();
+    
+    // for(int i=0; i<input.Length; i++)
+    //     {
+    //         sb.Append(input[i]);
+    //         if (i < input.Length-1)
+    //         {
+    //             sb.Append("*");
+    //         }
+    //     }
+    
+    // System.Console.WriteLine(sb);
+
+    
+
         
     }
     public static string ValidateUsername(string username)
