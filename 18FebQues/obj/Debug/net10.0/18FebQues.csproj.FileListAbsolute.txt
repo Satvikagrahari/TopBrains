@@ -1,0 +1,15 @@
+C:\TopBrains\18FebQues\bin\Debug\net10.0\18FebQues.exe
+C:\TopBrains\18FebQues\bin\Debug\net10.0\18FebQues.deps.json
+C:\TopBrains\18FebQues\bin\Debug\net10.0\18FebQues.runtimeconfig.json
+C:\TopBrains\18FebQues\bin\Debug\net10.0\18FebQues.dll
+C:\TopBrains\18FebQues\bin\Debug\net10.0\18FebQues.pdb
+C:\TopBrains\18FebQues\obj\Debug\net10.0\18FebQues.GeneratedMSBuildEditorConfig.editorconfig
+C:\TopBrains\18FebQues\obj\Debug\net10.0\18FebQues.AssemblyInfoInputs.cache
+C:\TopBrains\18FebQues\obj\Debug\net10.0\18FebQues.AssemblyInfo.cs
+C:\TopBrains\18FebQues\obj\Debug\net10.0\18FebQues.csproj.CoreCompileInputs.cache
+C:\TopBrains\18FebQues\obj\Debug\net10.0\18FebQues.sourcelink.json
+C:\TopBrains\18FebQues\obj\Debug\net10.0\18FebQues.dll
+C:\TopBrains\18FebQues\obj\Debug\net10.0\refint\18FebQues.dll
+C:\TopBrains\18FebQues\obj\Debug\net10.0\18FebQues.pdb
+C:\TopBrains\18FebQues\obj\Debug\net10.0\18FebQues.genruntimeconfig.cache
+C:\TopBrains\18FebQues\obj\Debug\net10.0\ref\18FebQues.dll

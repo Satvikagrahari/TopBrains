@@ -1,0 +1,15 @@
+C:\TopBrains\ScenarioBased17Feb\HospitalManagementSystem\bin\Debug\net10.0\HospitalManagementSystem.exe
+C:\TopBrains\ScenarioBased17Feb\HospitalManagementSystem\bin\Debug\net10.0\HospitalManagementSystem.deps.json
+C:\TopBrains\ScenarioBased17Feb\HospitalManagementSystem\bin\Debug\net10.0\HospitalManagementSystem.runtimeconfig.json
+C:\TopBrains\ScenarioBased17Feb\HospitalManagementSystem\bin\Debug\net10.0\HospitalManagementSystem.dll
+C:\TopBrains\ScenarioBased17Feb\HospitalManagementSystem\bin\Debug\net10.0\HospitalManagementSystem.pdb
+C:\TopBrains\ScenarioBased17Feb\HospitalManagementSystem\obj\Debug\net10.0\HospitalManagementSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\TopBrains\ScenarioBased17Feb\HospitalManagementSystem\obj\Debug\net10.0\HospitalManagementSystem.AssemblyInfoInputs.cache
+C:\TopBrains\ScenarioBased17Feb\HospitalManagementSystem\obj\Debug\net10.0\HospitalManagementSystem.AssemblyInfo.cs
+C:\TopBrains\ScenarioBased17Feb\HospitalManagementSystem\obj\Debug\net10.0\HospitalManagementSystem.csproj.CoreCompileInputs.cache
+C:\TopBrains\ScenarioBased17Feb\HospitalManagementSystem\obj\Debug\net10.0\HospitalManagementSystem.sourcelink.json
+C:\TopBrains\ScenarioBased17Feb\HospitalManagementSystem\obj\Debug\net10.0\HospitalManagementSystem.dll
+C:\TopBrains\ScenarioBased17Feb\HospitalManagementSystem\obj\Debug\net10.0\refint\HospitalManagementSystem.dll
+C:\TopBrains\ScenarioBased17Feb\HospitalManagementSystem\obj\Debug\net10.0\HospitalManagementSystem.pdb
+C:\TopBrains\ScenarioBased17Feb\HospitalManagementSystem\obj\Debug\net10.0\HospitalManagementSystem.genruntimeconfig.cache
+C:\TopBrains\ScenarioBased17Feb\HospitalManagementSystem\obj\Debug\net10.0\ref\HospitalManagementSystem.dll

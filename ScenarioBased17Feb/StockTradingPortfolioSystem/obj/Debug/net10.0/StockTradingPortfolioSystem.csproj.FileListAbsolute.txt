@@ -1,0 +1,15 @@
+C:\TopBrains\ScenarioBased17Feb\StockTradingPortfolioSystem\bin\Debug\net10.0\StockTradingPortfolioSystem.exe
+C:\TopBrains\ScenarioBased17Feb\StockTradingPortfolioSystem\bin\Debug\net10.0\StockTradingPortfolioSystem.deps.json
+C:\TopBrains\ScenarioBased17Feb\StockTradingPortfolioSystem\bin\Debug\net10.0\StockTradingPortfolioSystem.runtimeconfig.json
+C:\TopBrains\ScenarioBased17Feb\StockTradingPortfolioSystem\bin\Debug\net10.0\StockTradingPortfolioSystem.dll
+C:\TopBrains\ScenarioBased17Feb\StockTradingPortfolioSystem\bin\Debug\net10.0\StockTradingPortfolioSystem.pdb
+C:\TopBrains\ScenarioBased17Feb\StockTradingPortfolioSystem\obj\Debug\net10.0\StockTradingPortfolioSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\TopBrains\ScenarioBased17Feb\StockTradingPortfolioSystem\obj\Debug\net10.0\StockTradingPortfolioSystem.AssemblyInfoInputs.cache
+C:\TopBrains\ScenarioBased17Feb\StockTradingPortfolioSystem\obj\Debug\net10.0\StockTradingPortfolioSystem.AssemblyInfo.cs
+C:\TopBrains\ScenarioBased17Feb\StockTradingPortfolioSystem\obj\Debug\net10.0\StockTradingPortfolioSystem.csproj.CoreCompileInputs.cache
+C:\TopBrains\ScenarioBased17Feb\StockTradingPortfolioSystem\obj\Debug\net10.0\StockTradingPortfolioSystem.sourcelink.json
+C:\TopBrains\ScenarioBased17Feb\StockTradingPortfolioSystem\obj\Debug\net10.0\StockTradingPortfolioSystem.dll
+C:\TopBrains\ScenarioBased17Feb\StockTradingPortfolioSystem\obj\Debug\net10.0\refint\StockTradingPortfolioSystem.dll
+C:\TopBrains\ScenarioBased17Feb\StockTradingPortfolioSystem\obj\Debug\net10.0\StockTradingPortfolioSystem.pdb
+C:\TopBrains\ScenarioBased17Feb\StockTradingPortfolioSystem\obj\Debug\net10.0\StockTradingPortfolioSystem.genruntimeconfig.cache
+C:\TopBrains\ScenarioBased17Feb\StockTradingPortfolioSystem\obj\Debug\net10.0\ref\StockTradingPortfolioSystem.dll
