@@ -1,5 +1,7 @@
 using System;
 using Services;
+using Domain;
+using Exceptions;
 
 namespace ConsoleApp
 {
@@ -7,40 +9,68 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            ManagementService service = new ManagementService();
+            PatientUtility service = new PatientUtility();
 
             while (true)
             {
-                Console.WriteLine("1. Display");
-                Console.WriteLine("2. Add");
-                Console.WriteLine("3. Update");
-                Console.WriteLine("4. Remove");
-                Console.WriteLine("5. Exit");
+                Console.WriteLine("1  Display Patients by Priority");
+                Console.WriteLine("2  Update Severity");
+                Console.WriteLine("3  Add Patient");
+                Console.WriteLine("4  Exit");
 
-                // TODO: Read user choice
+                int choice = Convert.ToInt32(Console.ReadLine());
 
-                int choice = 0; // TODO
-
-                switch (choice)
+                try
                 {
-                    case 1:
-                        // TODO: Display data
-                        break;
-                    case 2:
-                        // TODO: Add entity
-                        break;
-                    case 3:
-                        // TODO: Update entity
-                        break;
-                    case 4:
-                        // TODO: Remove entity
-                        break;
-                    case 5:
-                        Console.WriteLine("Thank You");
-                        return;
-                    default:
-                        // TODO: Handle invalid choice
-                        break;
+                    switch (choice)
+                    {
+                        case 1:
+                            foreach (var p in service.GetAll())
+                            {
+                                Console.WriteLine($"{p.PatientId} | {p.Name} | {p.SeverityLevel}");
+                            }
+                            break;
+
+                        case 2:
+                            service.UpdateSeverity();
+                            break;
+
+                        case 3:
+                            Console.WriteLine("Enter Patient Id:");
+                            string id = Console.ReadLine();
+
+                            Console.WriteLine("Enter Name:");
+                            string name = Console.ReadLine();
+
+                            Console.WriteLine("Enter Severity Level:");
+                            int severity = Convert.ToInt32(Console.ReadLine());
+
+                            Patient patient = new Patient
+                            {
+                                PatientId = id,
+                                Name = name,
+                                SeverityLevel = severity
+                            };
+
+                            service.AddPatient(patient);
+                            break;
+
+                        case 4:
+                            Console.WriteLine("Thank You");
+                            return;
+
+                        default:
+                            Console.WriteLine("Invalid Choice");
+                            break;
+                    }
+                }
+                catch (InvalidSeverityLevelException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                catch (PatientNotFoundException ex)
+                {
+                    Console.WriteLine(ex.Message);
                 }
             }
         }

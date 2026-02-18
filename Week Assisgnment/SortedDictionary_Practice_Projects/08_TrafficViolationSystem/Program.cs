@@ -1,5 +1,6 @@
 using System;
 using Services;
+using Exceptions;
 
 namespace ConsoleApp
 {
@@ -7,40 +8,54 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            ManagementService service = new ManagementService();
+            ViolationUtility service = new ViolationUtility();
 
             while (true)
             {
-                Console.WriteLine("1. Display");
-                Console.WriteLine("2. Add");
-                Console.WriteLine("3. Update");
-                Console.WriteLine("4. Remove");
-                Console.WriteLine("5. Exit");
+                Console.WriteLine("1 → Display Violations");
+                Console.WriteLine("2 → Pay Fine");
+                Console.WriteLine("3 → Add Violation");
+                Console.WriteLine("4 → Exit");
 
-                // TODO: Read user choice
+                Console.WriteLine("Enter Choice:");
+                int choice = Convert.ToInt32(Console.ReadLine());
 
-                int choice = 0; // TODO
-
-                switch (choice)
+                try
                 {
-                    case 1:
-                        // TODO: Display data
-                        break;
-                    case 2:
-                        // TODO: Add entity
-                        break;
-                    case 3:
-                        // TODO: Update entity
-                        break;
-                    case 4:
-                        // TODO: Remove entity
-                        break;
-                    case 5:
-                        Console.WriteLine("Thank You");
-                        return;
-                    default:
-                        // TODO: Handle invalid choice
-                        break;
+                    switch (choice)
+                    {
+                        case 1:
+                            service.DisplayViolations();
+                            break;
+
+                        case 2:
+                            service.PayFine();
+                            break;
+
+                        case 3:
+                            service.AddViolation();
+                            break;
+
+                        case 4:
+                            Console.WriteLine("Thank You");
+                            return;
+
+                        default:
+                            Console.WriteLine("Invalid Choice.");
+                            break;
+                    }
+                }
+                catch (InvalidFineAmountException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                catch (DuplicateViolationException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
                 }
             }
         }

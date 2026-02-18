@@ -2,8 +2,12 @@ using System;
 
 namespace Exceptions
 {
-    public class CustomBaseException : Exception
+    public class InvalidSeverityLevelException : Exception
     {
-        public CustomBaseException(string message) : base(message) { }
+        public InvalidSeverityLevelException(string message) : base(message) { }
+    }
+    public class PatientNotFoundException : Exception
+    {
+        public PatientNotFoundException(string message) : base(message) { }
     }
 }

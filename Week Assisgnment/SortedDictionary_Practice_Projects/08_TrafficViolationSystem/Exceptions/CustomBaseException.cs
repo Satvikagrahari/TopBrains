@@ -1,9 +1,17 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Exceptions
 {
-    public class CustomBaseException : Exception
+    public class DuplicateViolationException : Exception
     {
-        public CustomBaseException(string message) : base(message) { }
+        public DuplicateViolationException(string message) : base(message) { }
+    }
+    public class InvalidFineAmountException : Exception
+    {
+        public InvalidFineAmountException(string message) : base(message) { }
     }
 }

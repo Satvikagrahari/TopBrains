@@ -1,9 +1,17 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Exceptions
 {
-    public class CustomBaseException : Exception
+    public class InvalidOrderAmountException : Exception
     {
-        public CustomBaseException(string message) : base(message) { }
+        public InvalidOrderAmountException(string message) : base(message) { }
+    }
+    public class OrderNotFoundException : Exception
+    {
+        public OrderNotFoundException(string message) : base(message) { }
     }
 }

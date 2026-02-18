@@ -7,39 +7,48 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            ManagementService service = new ManagementService();
+            InvestementUtility service = new InvestementUtility();
 
             while (true)
             {
-                Console.WriteLine("1. Display");
-                Console.WriteLine("2. Add");
-                Console.WriteLine("3. Update");
-                Console.WriteLine("4. Remove");
-                Console.WriteLine("5. Exit");
+                Console.WriteLine("1. Display Investement");
+                Console.WriteLine("2. Update Risk");
+                Console.WriteLine("3. Add Investment");
+                Console.WriteLine("4. Exit");
 
-                // TODO: Read user choice
 
-                int choice = 0; // TODO
+
+                int choice = Convert.ToInt32(Console.ReadLine());
 
                 switch (choice)
                 {
                     case 1:
-                        // TODO: Display data
+                        service.DisplayInvestement();
                         break;
                     case 2:
-                        // TODO: Add entity
+                        try
+                        {
+                            service.UpdateRisk();
+                        }
+                        catch (Exception ex) {
+                            Console.WriteLine(ex.Message);
+                        }
                         break;
                     case 3:
-                        // TODO: Update entity
+                        try
+                        {
+                            service.AddInvestment();
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
                         break;
                     case 4:
-                        // TODO: Remove entity
-                        break;
-                    case 5:
-                        Console.WriteLine("Thank You");
+                        Console.WriteLine("Exiting");
                         return;
                     default:
-                        // TODO: Handle invalid choice
+                        Console.WriteLine("Invalid choice");
                         break;
                 }
             }

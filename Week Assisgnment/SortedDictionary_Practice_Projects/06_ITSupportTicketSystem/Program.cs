@@ -1,5 +1,6 @@
 using System;
 using Services;
+using Domain;
 
 namespace ConsoleApp
 {
@@ -7,40 +8,63 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            ManagementService service = new ManagementService();
+            SupportUtility service = new SupportUtility();
 
             while (true)
             {
-                Console.WriteLine("1. Display");
-                Console.WriteLine("2. Add");
-                Console.WriteLine("3. Update");
-                Console.WriteLine("4. Remove");
-                Console.WriteLine("5. Exit");
+                Console.WriteLine("\n1. Display Ticket");
+                Console.WriteLine("2. Add Ticket");
+                Console.WriteLine("3. Escalate Ticket");
+                Console.WriteLine("4. Exit");
 
-                // TODO: Read user choice
-
-                int choice = 0; // TODO
-
-                switch (choice)
+                try
                 {
-                    case 1:
-                        // TODO: Display data
-                        break;
-                    case 2:
-                        // TODO: Add entity
-                        break;
-                    case 3:
-                        // TODO: Update entity
-                        break;
-                    case 4:
-                        // TODO: Remove entity
-                        break;
-                    case 5:
-                        Console.WriteLine("Thank You");
-                        return;
-                    default:
-                        // TODO: Handle invalid choice
-                        break;
+                    int choice = int.Parse(Console.ReadLine());
+
+                    switch (choice)
+                    {
+                        case 1:
+                            service.DisplayTicket();
+                            break;
+
+                        case 2:
+                            Console.Write("TicketId: ");
+                            string id = Console.ReadLine();
+
+                            Console.Write("IssueDescription: ");
+                            string desc = Console.ReadLine();
+
+                            Console.Write("SeverityLevel: ");
+                            int severity = int.Parse(Console.ReadLine());
+
+                            SupportTicket tkt = new SupportTicket
+                            {
+                                TicketId = id,
+                                IssueDiscription = desc,
+                                SeverityLevel = severity
+                            };
+
+                            service.AddTicket(tkt);
+                            break;
+
+                        case 3:
+                            Console.Write("Enter TicketId to Escalate: ");
+                            string escId = Console.ReadLine();
+                            service.EscalateTicket(escId);
+                            break;
+
+                        case 4:
+                            Console.WriteLine("Thank You");
+                            return;
+
+                        default:
+                            Console.WriteLine("Invalid choice");
+                            break;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
                 }
             }
         }
