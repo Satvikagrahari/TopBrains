@@ -1,0 +1,15 @@
+C:\TopBrains\EcommerceStack\obj\Debug\net10.0\EcommerceStack.GeneratedMSBuildEditorConfig.editorconfig
+C:\TopBrains\EcommerceStack\obj\Debug\net10.0\EcommerceStack.AssemblyInfoInputs.cache
+C:\TopBrains\EcommerceStack\obj\Debug\net10.0\EcommerceStack.AssemblyInfo.cs
+C:\TopBrains\EcommerceStack\obj\Debug\net10.0\EcommerceStack.csproj.CoreCompileInputs.cache
+C:\TopBrains\EcommerceStack\obj\Debug\net10.0\EcommerceStack.sourcelink.json
+C:\TopBrains\EcommerceStack\bin\Debug\net10.0\EcommerceStack.exe
+C:\TopBrains\EcommerceStack\bin\Debug\net10.0\EcommerceStack.deps.json
+C:\TopBrains\EcommerceStack\bin\Debug\net10.0\EcommerceStack.runtimeconfig.json
+C:\TopBrains\EcommerceStack\bin\Debug\net10.0\EcommerceStack.dll
+C:\TopBrains\EcommerceStack\bin\Debug\net10.0\EcommerceStack.pdb
+C:\TopBrains\EcommerceStack\obj\Debug\net10.0\EcommerceStack.dll
+C:\TopBrains\EcommerceStack\obj\Debug\net10.0\refint\EcommerceStack.dll
+C:\TopBrains\EcommerceStack\obj\Debug\net10.0\EcommerceStack.pdb
+C:\TopBrains\EcommerceStack\obj\Debug\net10.0\EcommerceStack.genruntimeconfig.cache
+C:\TopBrains\EcommerceStack\obj\Debug\net10.0\ref\EcommerceStack.dll
