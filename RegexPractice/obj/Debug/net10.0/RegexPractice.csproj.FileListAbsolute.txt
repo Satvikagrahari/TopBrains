@@ -1,0 +1,15 @@
+C:\TopBrains\RegexPractice\bin\Debug\net10.0\RegexPractice.exe
+C:\TopBrains\RegexPractice\bin\Debug\net10.0\RegexPractice.deps.json
+C:\TopBrains\RegexPractice\bin\Debug\net10.0\RegexPractice.runtimeconfig.json
+C:\TopBrains\RegexPractice\bin\Debug\net10.0\RegexPractice.dll
+C:\TopBrains\RegexPractice\bin\Debug\net10.0\RegexPractice.pdb
+C:\TopBrains\RegexPractice\obj\Debug\net10.0\RegexPractice.GeneratedMSBuildEditorConfig.editorconfig
+C:\TopBrains\RegexPractice\obj\Debug\net10.0\RegexPractice.AssemblyInfoInputs.cache
+C:\TopBrains\RegexPractice\obj\Debug\net10.0\RegexPractice.AssemblyInfo.cs
+C:\TopBrains\RegexPractice\obj\Debug\net10.0\RegexPractice.csproj.CoreCompileInputs.cache
+C:\TopBrains\RegexPractice\obj\Debug\net10.0\RegexPractice.sourcelink.json
+C:\TopBrains\RegexPractice\obj\Debug\net10.0\RegexPractice.dll
+C:\TopBrains\RegexPractice\obj\Debug\net10.0\refint\RegexPractice.dll
+C:\TopBrains\RegexPractice\obj\Debug\net10.0\RegexPractice.pdb
+C:\TopBrains\RegexPractice\obj\Debug\net10.0\RegexPractice.genruntimeconfig.cache
+C:\TopBrains\RegexPractice\obj\Debug\net10.0\ref\RegexPractice.dll
