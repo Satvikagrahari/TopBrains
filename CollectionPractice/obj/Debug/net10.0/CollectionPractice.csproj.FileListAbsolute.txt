@@ -1,0 +1,15 @@
+C:\TopBrains\CollectionPractice\obj\Debug\net10.0\CollectionPractice.GeneratedMSBuildEditorConfig.editorconfig
+C:\TopBrains\CollectionPractice\obj\Debug\net10.0\CollectionPractice.AssemblyInfoInputs.cache
+C:\TopBrains\CollectionPractice\obj\Debug\net10.0\CollectionPractice.AssemblyInfo.cs
+C:\TopBrains\CollectionPractice\obj\Debug\net10.0\CollectionPractice.csproj.CoreCompileInputs.cache
+C:\TopBrains\CollectionPractice\obj\Debug\net10.0\CollectionPractice.sourcelink.json
+C:\TopBrains\CollectionPractice\bin\Debug\net10.0\CollectionPractice.exe
+C:\TopBrains\CollectionPractice\bin\Debug\net10.0\CollectionPractice.deps.json
+C:\TopBrains\CollectionPractice\bin\Debug\net10.0\CollectionPractice.runtimeconfig.json
+C:\TopBrains\CollectionPractice\bin\Debug\net10.0\CollectionPractice.dll
+C:\TopBrains\CollectionPractice\bin\Debug\net10.0\CollectionPractice.pdb
+C:\TopBrains\CollectionPractice\obj\Debug\net10.0\CollectionPractice.dll
+C:\TopBrains\CollectionPractice\obj\Debug\net10.0\refint\CollectionPractice.dll
+C:\TopBrains\CollectionPractice\obj\Debug\net10.0\CollectionPractice.pdb
+C:\TopBrains\CollectionPractice\obj\Debug\net10.0\CollectionPractice.genruntimeconfig.cache
+C:\TopBrains\CollectionPractice\obj\Debug\net10.0\ref\CollectionPractice.dll
