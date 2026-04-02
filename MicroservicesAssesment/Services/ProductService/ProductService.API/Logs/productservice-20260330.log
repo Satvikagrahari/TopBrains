@@ -1,0 +1,545 @@
+2026-03-30 11:18:21.259 +05:30 [INF] Executed DbCommand (45ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-30 11:18:21.380 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-03-30 11:18:21.450 +05:30 [INF] Executed DbCommand (62ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-03-30 11:18:21.630 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-03-30 11:18:21.665 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-30 11:18:21.674 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-03-30 11:18:21.720 +05:30 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-03-30 11:18:21.740 +05:30 [INF] No migrations were applied. The database is already up to date.
+2026-03-30 11:18:21.754 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-03-30 11:18:22.116 +05:30 [INF] User profile is available. Using 'C:\Users\Srikrishna\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-30 11:18:22.418 +05:30 [WRN] The WebRootPath was not found: D:\DotNetCorePractise\MicroservicesAssesment\Services\ProductService\ProductService.API\wwwroot. Static files may be unavailable.
+2026-03-30 11:18:22.670 +05:30 [INF] Now listening on: https://localhost:5021
+2026-03-30 11:18:22.672 +05:30 [INF] Now listening on: http://localhost:5020
+2026-03-30 11:18:22.857 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-30 11:18:22.859 +05:30 [INF] Hosting environment: Development
+2026-03-30 11:18:22.860 +05:30 [INF] Content root path: D:\DotNetCorePractise\MicroservicesAssesment\Services\ProductService\ProductService.API
+2026-03-30 11:18:27.354 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5021/ - null null
+2026-03-30 11:18:30.102 +05:30 [INF] HTTP GET / responded 404 in 2491.9358 ms
+2026-03-30 11:18:30.116 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5021/ - 404 null null 2766.0087ms
+2026-03-30 11:18:30.126 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5021/, Response status code: 404
+2026-03-30 11:31:08.120 +05:30 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-30 11:31:08.220 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-03-30 11:31:08.258 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-03-30 11:31:08.406 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-03-30 11:31:08.430 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-30 11:31:08.439 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-03-30 11:31:08.477 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-03-30 11:31:08.510 +05:30 [INF] No migrations were applied. The database is already up to date.
+2026-03-30 11:31:08.520 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-03-30 11:31:08.872 +05:30 [INF] User profile is available. Using 'C:\Users\Srikrishna\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-30 11:31:09.091 +05:30 [WRN] The WebRootPath was not found: D:\DotNetCorePractise\MicroservicesAssesment\Services\ProductService\ProductService.API\wwwroot. Static files may be unavailable.
+2026-03-30 11:31:09.336 +05:30 [INF] Now listening on: https://localhost:5021
+2026-03-30 11:31:09.338 +05:30 [INF] Now listening on: http://localhost:5020
+2026-03-30 11:31:09.824 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-30 11:31:09.837 +05:30 [INF] Hosting environment: Development
+2026-03-30 11:31:09.872 +05:30 [INF] Content root path: D:\DotNetCorePractise\MicroservicesAssesment\Services\ProductService\ProductService.API
+2026-03-30 11:31:10.302 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5021/ - null null
+2026-03-30 11:31:10.657 +05:30 [INF] HTTP GET / responded 404 in 125.9526 ms
+2026-03-30 11:31:10.672 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5021/ - 404 null null 373.4123ms
+2026-03-30 11:31:10.688 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5021/, Response status code: 404
+2026-03-30 14:31:00.754 +05:30 [INF] Executed DbCommand (2,868ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [ECommerceMSProductDb];
+2026-03-30 14:31:01.245 +05:30 [INF] Executed DbCommand (441ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [ECommerceMSProductDb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2026-03-30 14:31:01.296 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-30 14:31:01.301 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-03-30 14:31:01.374 +05:30 [INF] Executed DbCommand (68ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-03-30 14:31:01.503 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-03-30 14:31:01.520 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-30 14:31:01.525 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-03-30 14:31:01.587 +05:30 [INF] Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-03-30 14:31:01.624 +05:30 [INF] Applying migration '20260330090032_inialCreate'.
+2026-03-30 14:31:01.692 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(100) NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [ImageUrl] nvarchar(max) NULL,
+    [IsActive] bit NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id])
+);
+2026-03-30 14:31:01.701 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [Price] decimal(18,2) NOT NULL,
+    [DiscountPrice] decimal(18,2) NULL,
+    [StockQuantity] int NOT NULL,
+    [ImageUrl] nvarchar(max) NULL,
+    [SKU] nvarchar(50) NOT NULL,
+    [IsActive] bit NOT NULL,
+    [CategoryId] uniqueidentifier NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Products_Categories_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Categories] ([Id]) ON DELETE CASCADE
+);
+2026-03-30 14:31:01.711 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Products_CategoryId] ON [Products] ([CategoryId]);
+2026-03-30 14:31:01.715 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Products_SKU] ON [Products] ([SKU]);
+2026-03-30 14:31:01.743 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20260330090032_inialCreate', N'10.0.5');
+2026-03-30 14:31:01.752 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-03-30 14:44:07.885 +05:30 [INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-30 14:44:08.043 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-03-30 14:44:08.310 +05:30 [INF] Executed DbCommand (251ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-03-30 14:44:08.524 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-03-30 14:44:08.625 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-30 14:44:08.695 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-03-30 14:44:09.155 +05:30 [INF] Executed DbCommand (368ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-03-30 14:44:09.215 +05:30 [INF] No migrations were applied. The database is already up to date.
+2026-03-30 14:44:09.317 +05:30 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-03-30 14:44:09.744 +05:30 [INF] User profile is available. Using 'C:\Users\Satvik\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-30 14:44:10.633 +05:30 [WRN] The WebRootPath was not found: C:\Users\Satvik\Downloads\MicroservicesAssesment\MicroservicesAssesment\Services\ProductService\ProductService.API\wwwroot. Static files may be unavailable.
+2026-03-30 14:44:12.671 +05:30 [INF] Now listening on: https://localhost:5021
+2026-03-30 14:44:12.741 +05:30 [INF] Now listening on: http://localhost:5020
+2026-03-30 14:44:13.196 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-30 14:44:13.443 +05:30 [INF] Hosting environment: Development
+2026-03-30 14:44:13.625 +05:30 [INF] Content root path: C:\Users\Satvik\Downloads\MicroservicesAssesment\MicroservicesAssesment\Services\ProductService\ProductService.API
+2026-03-30 14:44:13.809 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5021/ - null null
+2026-03-30 14:44:22.232 +05:30 [INF] HTTP GET / responded 404 in 4091.4035 ms
+2026-03-30 14:44:22.549 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5021/ - 404 null null 8753.1242ms
+2026-03-30 14:44:22.834 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5021/, Response status code: 404
+2026-03-30 14:50:16.105 +05:30 [INF] Executed DbCommand (79ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-30 14:50:16.449 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-03-30 14:50:16.551 +05:30 [INF] Executed DbCommand (71ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-03-30 14:50:17.037 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-03-30 14:50:17.364 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-30 14:50:17.398 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-03-30 14:50:17.542 +05:30 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-03-30 14:50:17.584 +05:30 [INF] No migrations were applied. The database is already up to date.
+2026-03-30 14:50:17.611 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-03-30 14:50:18.560 +05:30 [INF] User profile is available. Using 'C:\Users\Satvik\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-30 14:50:19.403 +05:30 [WRN] The WebRootPath was not found: C:\Users\Satvik\Downloads\MicroservicesAssesment\MicroservicesAssesment\Services\ProductService\ProductService.API\wwwroot. Static files may be unavailable.
+2026-03-30 14:50:20.143 +05:30 [INF] Now listening on: https://localhost:5021
+2026-03-30 14:50:20.284 +05:30 [INF] Now listening on: http://localhost:5020
+2026-03-30 14:50:21.116 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-30 14:50:21.238 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5021/ - null null
+2026-03-30 14:50:21.249 +05:30 [INF] Hosting environment: Development
+2026-03-30 14:50:21.692 +05:30 [INF] Content root path: C:\Users\Satvik\Downloads\MicroservicesAssesment\MicroservicesAssesment\Services\ProductService\ProductService.API
+2026-03-30 14:50:23.251 +05:30 [INF] HTTP GET / responded 404 in 458.2041 ms
+2026-03-30 14:50:23.592 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5021/ - 404 null null 2360.2978ms
+2026-03-30 14:50:23.714 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5021/, Response status code: 404
+2026-03-30 14:54:20.628 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger - null null
+2026-03-30 14:54:20.692 +05:30 [INF] HTTP GET /swagger responded 301 in 5.1066 ms
+2026-03-30 14:54:20.725 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger - 301 null null 97.4668ms
+2026-03-30 14:54:20.744 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/index.html - null null
+2026-03-30 14:54:20.983 +05:30 [INF] HTTP GET /swagger/index.html responded 200 in 217.0238 ms
+2026-03-30 14:54:21.010 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/index.html - 200 null text/html;charset=utf-8 265.569ms
+2026-03-30 14:54:21.075 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui.css - null null
+2026-03-30 14:54:21.125 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui-standalone-preset.js - null null
+2026-03-30 14:54:21.124 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui-bundle.js - null null
+2026-03-30 14:54:21.075 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/index.css - null null
+2026-03-30 14:54:21.166 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/index.js - null null
+2026-03-30 14:54:21.207 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-30 14:54:21.265 +05:30 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 55.5117 ms
+2026-03-30 14:54:21.264 +05:30 [INF] HTTP GET /swagger/index.css responded 200 in 33.0459 ms
+2026-03-30 14:54:21.262 +05:30 [INF] HTTP GET /swagger/index.js responded 200 in 4.9772 ms
+2026-03-30 14:54:21.340 +05:30 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 124.6432 ms
+2026-03-30 14:54:21.340 +05:30 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 115.4258 ms
+2026-03-30 14:54:21.362 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui.css - 200 26479 text/css 286.955ms
+2026-03-30 14:54:21.362 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/_framework/aspnetcore-browser-refresh.js - 200 14941 application/javascript; charset=utf-8 155.9759ms
+2026-03-30 14:54:21.371 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/index.css - 200 152 text/css 295.8992ms
+2026-03-30 14:54:21.377 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/index.js - 200 null application/javascript;charset=utf-8 210.9207ms
+2026-03-30 14:54:21.388 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui-standalone-preset.js - 200 76613 text/javascript 263.1601ms
+2026-03-30 14:54:21.391 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui-bundle.js - 200 418181 text/javascript 267.6896ms
+2026-03-30 14:54:21.419 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/_vs/browserLink - null null
+2026-03-30 14:54:21.580 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/_vs/browserLink - 200 null text/javascript; charset=UTF-8 159.8887ms
+2026-03-30 14:54:21.776 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/v1/swagger.json - null null
+2026-03-30 14:54:21.834 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/favicon-32x32.png - null null
+2026-03-30 14:54:21.838 +05:30 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 50.8363 ms
+2026-03-30 14:54:21.853 +05:30 [INF] HTTP GET /swagger/favicon-32x32.png responded 200 in 5.5578 ms
+2026-03-30 14:54:21.858 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 81.867ms
+2026-03-30 14:54:21.871 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/favicon-32x32.png - 200 628 image/png 36.683ms
+2026-03-30 14:54:29.565 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/api/v1/categories - null null
+2026-03-30 14:54:29.594 +05:30 [INF] Executing endpoint 'ProductService.API.Controllers.CategoryController.GetAll (ProductService.API)'
+2026-03-30 14:54:29.674 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductService.API.Controllers.CategoryController (ProductService.API).
+2026-03-30 14:54:30.000 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-30 14:54:31.571 +05:30 [INF] Executed DbCommand (132ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[Description], [c].[ImageUrl], [c].[IsActive], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy], [p].[Id], [p].[CategoryId], [p].[CreatedAt], [p].[CreatedBy], [p].[Description], [p].[DiscountPrice], [p].[ImageUrl], [p].[IsActive], [p].[Name], [p].[Price], [p].[SKU], [p].[StockQuantity], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Categories] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[Id] = [p].[CategoryId]
+WHERE [c].[IsActive] = CAST(1 AS bit)
+ORDER BY [c].[Id]
+2026-03-30 14:54:31.734 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[ProductService.Application.DTOs.CategoryDto, ProductService.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-30 14:54:31.781 +05:30 [INF] Executed action ProductService.API.Controllers.CategoryController.GetAll (ProductService.API) in 2091.18ms
+2026-03-30 14:54:31.788 +05:30 [INF] Executed endpoint 'ProductService.API.Controllers.CategoryController.GetAll (ProductService.API)'
+2026-03-30 14:54:31.794 +05:30 [INF] HTTP GET /api/v1/categories responded 200 in 2204.7209 ms
+2026-03-30 14:54:31.813 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/api/v1/categories - 200 null application/json; charset=utf-8 2247.8637ms
+2026-03-30 14:55:29.576 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5020/api/v1/categories - application/json 53
+2026-03-30 14:55:29.610 +05:30 [INF] CORS policy execution successful.
+2026-03-30 14:55:29.659 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|StoreManager)
+2026-03-30 14:55:29.679 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-30 14:55:29.685 +05:30 [INF] HTTP POST /api/v1/categories responded 401 in 62.5486 ms
+2026-03-30 14:55:29.698 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5020/api/v1/categories - 401 0 null 122.385ms
+2026-03-30 14:55:34.625 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/api/v1/categories - null null
+2026-03-30 14:55:34.633 +05:30 [INF] Executing endpoint 'ProductService.API.Controllers.CategoryController.GetAll (ProductService.API)'
+2026-03-30 14:55:34.636 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductService.API.Controllers.CategoryController (ProductService.API).
+2026-03-30 14:55:34.901 +05:30 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[Description], [c].[ImageUrl], [c].[IsActive], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy], [p].[Id], [p].[CategoryId], [p].[CreatedAt], [p].[CreatedBy], [p].[Description], [p].[DiscountPrice], [p].[ImageUrl], [p].[IsActive], [p].[Name], [p].[Price], [p].[SKU], [p].[StockQuantity], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Categories] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[Id] = [p].[CategoryId]
+WHERE [c].[IsActive] = CAST(1 AS bit)
+ORDER BY [c].[Id]
+2026-03-30 14:55:34.911 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[ProductService.Application.DTOs.CategoryDto, ProductService.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-30 14:55:34.914 +05:30 [INF] Executed action ProductService.API.Controllers.CategoryController.GetAll (ProductService.API) in 272.5256ms
+2026-03-30 14:55:34.919 +05:30 [INF] Executed endpoint 'ProductService.API.Controllers.CategoryController.GetAll (ProductService.API)'
+2026-03-30 14:55:34.921 +05:30 [INF] HTTP GET /api/v1/categories responded 200 in 288.8579 ms
+2026-03-30 14:55:34.925 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/api/v1/categories - 200 null application/json; charset=utf-8 300.1277ms
+2026-03-30 14:56:08.453 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/api/v1/categories - null null
+2026-03-30 14:56:08.477 +05:30 [INF] Executing endpoint 'ProductService.API.Controllers.CategoryController.GetAll (ProductService.API)'
+2026-03-30 14:56:08.480 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductService.API.Controllers.CategoryController (ProductService.API).
+2026-03-30 14:56:08.529 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[Description], [c].[ImageUrl], [c].[IsActive], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy], [p].[Id], [p].[CategoryId], [p].[CreatedAt], [p].[CreatedBy], [p].[Description], [p].[DiscountPrice], [p].[ImageUrl], [p].[IsActive], [p].[Name], [p].[Price], [p].[SKU], [p].[StockQuantity], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Categories] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[Id] = [p].[CategoryId]
+WHERE [c].[IsActive] = CAST(1 AS bit)
+ORDER BY [c].[Id]
+2026-03-30 14:56:08.541 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[ProductService.Application.DTOs.CategoryDto, ProductService.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-30 14:56:08.546 +05:30 [INF] Executed action ProductService.API.Controllers.CategoryController.GetAll (ProductService.API) in 54.2763ms
+2026-03-30 14:56:08.553 +05:30 [INF] Executed endpoint 'ProductService.API.Controllers.CategoryController.GetAll (ProductService.API)'
+2026-03-30 14:56:08.556 +05:30 [INF] HTTP GET /api/v1/categories responded 200 in 79.5556 ms
+2026-03-30 14:56:08.562 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/api/v1/categories - 200 null application/json; charset=utf-8 108.8491ms
+2026-03-30 14:57:38.167 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/api/v1/categories - null null
+2026-03-30 14:57:38.937 +05:30 [INF] Executing endpoint 'ProductService.API.Controllers.CategoryController.GetAll (ProductService.API)'
+2026-03-30 14:57:38.942 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductService.API.Controllers.CategoryController (ProductService.API).
+2026-03-30 14:57:38.981 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[Description], [c].[ImageUrl], [c].[IsActive], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy], [p].[Id], [p].[CategoryId], [p].[CreatedAt], [p].[CreatedBy], [p].[Description], [p].[DiscountPrice], [p].[ImageUrl], [p].[IsActive], [p].[Name], [p].[Price], [p].[SKU], [p].[StockQuantity], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Categories] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[Id] = [p].[CategoryId]
+WHERE [c].[IsActive] = CAST(1 AS bit)
+ORDER BY [c].[Id]
+2026-03-30 14:57:38.990 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[ProductService.Application.DTOs.CategoryDto, ProductService.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-30 14:57:38.995 +05:30 [INF] Executed action ProductService.API.Controllers.CategoryController.GetAll (ProductService.API) in 47.2917ms
+2026-03-30 14:57:39.000 +05:30 [INF] Executed endpoint 'ProductService.API.Controllers.CategoryController.GetAll (ProductService.API)'
+2026-03-30 14:57:39.003 +05:30 [INF] HTTP GET /api/v1/categories responded 200 in 828.1415 ms
+2026-03-30 14:57:39.011 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/api/v1/categories - 200 null application/json; charset=utf-8 843.5566ms
+2026-03-30 14:58:00.547 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5020/api/v1/categories - application/json 53
+2026-03-30 14:58:00.575 +05:30 [INF] CORS policy execution successful.
+2026-03-30 14:58:00.590 +05:30 [INF] Executing endpoint 'ProductService.API.Controllers.CategoryController.Create (ProductService.API)'
+2026-03-30 14:58:00.640 +05:30 [INF] Route matched with {action = "Create", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ProductService.Application.DTOs.CreateCategoryDto) on controller ProductService.API.Controllers.CategoryController (ProductService.API).
+2026-03-30 14:58:01.742 +05:30 [INF] Executed DbCommand (145ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Boolean), @p6='?' (Size = 100), @p7='?' (DbType = DateTime2), @p8='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Categories] ([Id], [CreatedAt], [CreatedBy], [Description], [ImageUrl], [IsActive], [Name], [UpdatedAt], [UpdatedBy])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2026-03-30 14:58:01.810 +05:30 [INF] Executing CreatedAtActionResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[ProductService.Application.DTOs.CategoryDto, ProductService.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-30 14:58:01.873 +05:30 [INF] Executed action ProductService.API.Controllers.CategoryController.Create (ProductService.API) in 1226.6612ms
+2026-03-30 14:58:01.877 +05:30 [INF] Executed endpoint 'ProductService.API.Controllers.CategoryController.Create (ProductService.API)'
+2026-03-30 14:58:01.879 +05:30 [INF] HTTP POST /api/v1/categories responded 201 in 1294.7125 ms
+2026-03-30 14:58:01.883 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5020/api/v1/categories - 201 null application/json; charset=utf-8 1335.9354ms
+2026-03-30 14:58:12.002 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/api/v1/categories - null null
+2026-03-30 14:58:12.013 +05:30 [INF] Executing endpoint 'ProductService.API.Controllers.CategoryController.GetAll (ProductService.API)'
+2026-03-30 14:58:12.018 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductService.API.Controllers.CategoryController (ProductService.API).
+2026-03-30 14:58:12.086 +05:30 [INF] Executed DbCommand (58ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[Description], [c].[ImageUrl], [c].[IsActive], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy], [p].[Id], [p].[CategoryId], [p].[CreatedAt], [p].[CreatedBy], [p].[Description], [p].[DiscountPrice], [p].[ImageUrl], [p].[IsActive], [p].[Name], [p].[Price], [p].[SKU], [p].[StockQuantity], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Categories] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[Id] = [p].[CategoryId]
+WHERE [c].[IsActive] = CAST(1 AS bit)
+ORDER BY [c].[Id]
+2026-03-30 14:58:12.173 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[ProductService.Application.DTOs.CategoryDto, ProductService.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-30 14:58:12.181 +05:30 [INF] Executed action ProductService.API.Controllers.CategoryController.GetAll (ProductService.API) in 155.399ms
+2026-03-30 14:58:12.186 +05:30 [INF] Executed endpoint 'ProductService.API.Controllers.CategoryController.GetAll (ProductService.API)'
+2026-03-30 14:58:12.191 +05:30 [INF] HTTP GET /api/v1/categories responded 200 in 179.3574 ms
+2026-03-30 14:58:12.199 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/api/v1/categories - 200 null application/json; charset=utf-8 197.2384ms
+2026-03-30 14:59:40.971 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5020/api/v1/products - application/json 193
+2026-03-30 14:59:40.981 +05:30 [INF] CORS policy execution successful.
+2026-03-30 14:59:41.014 +05:30 [INF] Executing endpoint 'ProductService.API.Controllers.ProductController.Create (ProductService.API)'
+2026-03-30 14:59:41.052 +05:30 [INF] Route matched with {action = "Create", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ProductService.Application.DTOs.CreateProductDto) on controller ProductService.API.Controllers.ProductController (ProductService.API).
+2026-03-30 14:59:41.505 +05:30 [ERR] Failed executing DbCommand (98ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (Size = 200), @p9='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p10='?' (Size = 50), @p11='?' (DbType = Int32), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Id], [CategoryId], [CreatedAt], [CreatedBy], [Description], [DiscountPrice], [ImageUrl], [IsActive], [Name], [Price], [SKU], [StockQuantity], [UpdatedAt], [UpdatedBy])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2026-03-30 14:59:41.638 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'ProductService.Infrastructure.Data.ProductDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Products_Categories_CategoryId". The conflict occurred in database "ECommerceMSProductDb", table "dbo.Categories", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:f64b057d-30ea-415b-a282-80764429838f
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Products_Categories_CategoryId". The conflict occurred in database "ECommerceMSProductDb", table "dbo.Categories", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:f64b057d-30ea-415b-a282-80764429838f
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-03-30 14:59:42.434 +05:30 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType2`2[[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-30 14:59:42.440 +05:30 [INF] Executed action ProductService.API.Controllers.ProductController.Create (ProductService.API) in 1382.4884ms
+2026-03-30 14:59:42.443 +05:30 [INF] Executed endpoint 'ProductService.API.Controllers.ProductController.Create (ProductService.API)'
+2026-03-30 14:59:42.447 +05:30 [INF] HTTP POST /api/v1/products responded 400 in 1463.5052 ms
+2026-03-30 14:59:42.455 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5020/api/v1/products - 400 null application/json; charset=utf-8 1483.2347ms
+2026-03-30 15:01:01.089 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5020/api/v1/products - application/json 193
+2026-03-30 15:01:01.098 +05:30 [INF] CORS policy execution successful.
+2026-03-30 15:01:01.103 +05:30 [INF] Executing endpoint 'ProductService.API.Controllers.ProductController.Create (ProductService.API)'
+2026-03-30 15:01:01.107 +05:30 [INF] Route matched with {action = "Create", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ProductService.Application.DTOs.CreateProductDto) on controller ProductService.API.Controllers.ProductController (ProductService.API).
+2026-03-30 15:01:01.163 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (Size = 200), @p9='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p10='?' (Size = 50), @p11='?' (DbType = Int32), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Id], [CategoryId], [CreatedAt], [CreatedBy], [Description], [DiscountPrice], [ImageUrl], [IsActive], [Name], [Price], [SKU], [StockQuantity], [UpdatedAt], [UpdatedBy])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2026-03-30 15:01:01.343 +05:30 [INF] Executed DbCommand (53ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CategoryId], [p].[CreatedAt], [p].[CreatedBy], [p].[Description], [p].[DiscountPrice], [p].[ImageUrl], [p].[IsActive], [p].[Name], [p].[Price], [p].[SKU], [p].[StockQuantity], [p].[UpdatedAt], [p].[UpdatedBy], [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[Description], [c].[ImageUrl], [c].[IsActive], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+WHERE [p].[Id] = @id
+2026-03-30 15:01:01.425 +05:30 [INF] Executing CreatedAtActionResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[ProductService.Application.DTOs.ProductDto, ProductService.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-30 15:01:01.459 +05:30 [INF] Executed action ProductService.API.Controllers.ProductController.Create (ProductService.API) in 346.1779ms
+2026-03-30 15:01:01.463 +05:30 [INF] Executed endpoint 'ProductService.API.Controllers.ProductController.Create (ProductService.API)'
+2026-03-30 15:01:01.466 +05:30 [INF] HTTP POST /api/v1/products responded 201 in 364.2239 ms
+2026-03-30 15:01:01.471 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5020/api/v1/products - 201 null application/json; charset=utf-8 382.1636ms
+2026-03-30 15:01:32.132 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/api/v1/products?category=clothes - null null
+2026-03-30 15:01:32.141 +05:30 [INF] Executing endpoint 'ProductService.API.Controllers.ProductController.GetAll (ProductService.API)'
+2026-03-30 15:01:32.169 +05:30 [INF] Route matched with {action = "GetAll", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.String, System.String, System.Nullable`1[System.Decimal], System.Nullable`1[System.Decimal]) on controller ProductService.API.Controllers.ProductController (ProductService.API).
+2026-03-30 15:01:32.446 +05:30 [INF] Executed DbCommand (94ms) [Parameters=[@ToLower_contains='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[CreatedAt], [p].[CreatedBy], [p].[Description], [p].[DiscountPrice], [p].[ImageUrl], [p].[IsActive], [p].[Name], [p].[Price], [p].[SKU], [p].[StockQuantity], [p].[UpdatedAt], [p].[UpdatedBy], [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[Description], [c].[ImageUrl], [c].[IsActive], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+WHERE [p].[IsActive] = CAST(1 AS bit) AND LOWER([c].[Name]) LIKE @ToLower_contains ESCAPE N'\'
+ORDER BY [p].[CreatedAt] DESC
+2026-03-30 15:01:32.490 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[ProductService.Application.DTOs.ProductDto, ProductService.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-30 15:01:32.513 +05:30 [INF] Executed action ProductService.API.Controllers.ProductController.GetAll (ProductService.API) in 339.1145ms
+2026-03-30 15:01:32.520 +05:30 [INF] Executed endpoint 'ProductService.API.Controllers.ProductController.GetAll (ProductService.API)'
+2026-03-30 15:01:32.526 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 386.5027 ms
+2026-03-30 15:01:32.533 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/api/v1/products?category=clothes - 200 null application/json; charset=utf-8 401.0982ms
+2026-03-30 15:35:51.742 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/api/v1/categories - null null
+2026-03-30 15:35:51.939 +05:30 [INF] Executing endpoint 'ProductService.API.Controllers.CategoryController.GetAll (ProductService.API)'
+2026-03-30 15:35:51.952 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductService.API.Controllers.CategoryController (ProductService.API).
+2026-03-30 15:35:55.537 +05:30 [INF] Executed DbCommand (61ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[Description], [c].[ImageUrl], [c].[IsActive], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy], [p].[Id], [p].[CategoryId], [p].[CreatedAt], [p].[CreatedBy], [p].[Description], [p].[DiscountPrice], [p].[ImageUrl], [p].[IsActive], [p].[Name], [p].[Price], [p].[SKU], [p].[StockQuantity], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Categories] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[Id] = [p].[CategoryId]
+WHERE [c].[IsActive] = CAST(1 AS bit)
+ORDER BY [c].[Id]
+2026-03-30 15:35:55.613 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[ProductService.Application.DTOs.CategoryDto, ProductService.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-30 15:35:55.624 +05:30 [INF] Executed action ProductService.API.Controllers.CategoryController.GetAll (ProductService.API) in 3648.334ms
+2026-03-30 15:35:55.628 +05:30 [INF] Executed endpoint 'ProductService.API.Controllers.CategoryController.GetAll (ProductService.API)'
+2026-03-30 15:35:55.630 +05:30 [INF] HTTP GET /api/v1/categories responded 200 in 3750.7438 ms
+2026-03-30 15:35:55.638 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/api/v1/categories - 200 null application/json; charset=utf-8 3899.3962ms
+2026-03-30 15:36:29.740 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5020/api/v1/categories - application/json 60
+2026-03-30 15:36:29.749 +05:30 [INF] CORS policy execution successful.
+2026-03-30 15:36:29.753 +05:30 [INF] Executing endpoint 'ProductService.API.Controllers.CategoryController.Create (ProductService.API)'
+2026-03-30 15:36:29.755 +05:30 [INF] Route matched with {action = "Create", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ProductService.Application.DTOs.CreateCategoryDto) on controller ProductService.API.Controllers.CategoryController (ProductService.API).
+2026-03-30 15:36:29.858 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Boolean), @p6='?' (Size = 100), @p7='?' (DbType = DateTime2), @p8='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Categories] ([Id], [CreatedAt], [CreatedBy], [Description], [ImageUrl], [IsActive], [Name], [UpdatedAt], [UpdatedBy])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2026-03-30 15:36:29.867 +05:30 [INF] Executing CreatedAtActionResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[ProductService.Application.DTOs.CategoryDto, ProductService.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-30 15:36:29.881 +05:30 [INF] Executed action ProductService.API.Controllers.CategoryController.Create (ProductService.API) in 117.6783ms
+2026-03-30 15:36:29.885 +05:30 [INF] Executed endpoint 'ProductService.API.Controllers.CategoryController.Create (ProductService.API)'
+2026-03-30 15:36:29.888 +05:30 [INF] HTTP POST /api/v1/categories responded 201 in 136.3570 ms
+2026-03-30 15:36:29.895 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5020/api/v1/categories - 201 null application/json; charset=utf-8 154.5544ms
+2026-03-30 15:36:53.496 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/api/v1/categories - null null
+2026-03-30 15:36:53.511 +05:30 [INF] Executing endpoint 'ProductService.API.Controllers.CategoryController.GetAll (ProductService.API)'
+2026-03-30 15:36:53.514 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductService.API.Controllers.CategoryController (ProductService.API).
+2026-03-30 15:36:53.555 +05:30 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[Description], [c].[ImageUrl], [c].[IsActive], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy], [p].[Id], [p].[CategoryId], [p].[CreatedAt], [p].[CreatedBy], [p].[Description], [p].[DiscountPrice], [p].[ImageUrl], [p].[IsActive], [p].[Name], [p].[Price], [p].[SKU], [p].[StockQuantity], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Categories] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[Id] = [p].[CategoryId]
+WHERE [c].[IsActive] = CAST(1 AS bit)
+ORDER BY [c].[Id]
+2026-03-30 15:36:53.567 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[ProductService.Application.DTOs.CategoryDto, ProductService.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-30 15:36:53.573 +05:30 [INF] Executed action ProductService.API.Controllers.CategoryController.GetAll (ProductService.API) in 54.2661ms
+2026-03-30 15:36:53.580 +05:30 [INF] Executed endpoint 'ProductService.API.Controllers.CategoryController.GetAll (ProductService.API)'
+2026-03-30 15:36:53.585 +05:30 [INF] HTTP GET /api/v1/categories responded 200 in 76.0418 ms
+2026-03-30 15:36:53.591 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/api/v1/categories - 200 null application/json; charset=utf-8 96.3124ms
+2026-03-30 15:37:17.916 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/api/v1/categories/1c886dab-6014-4552-aeef-6bd2b3b87303 - null null
+2026-03-30 15:37:17.935 +05:30 [INF] Executing endpoint 'ProductService.API.Controllers.CategoryController.GetById (ProductService.API)'
+2026-03-30 15:37:17.985 +05:30 [INF] Route matched with {action = "GetById", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller ProductService.API.Controllers.CategoryController (ProductService.API).
+2026-03-30 15:37:18.459 +05:30 [INF] Executed DbCommand (359ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[Id], [c0].[CreatedAt], [c0].[CreatedBy], [c0].[Description], [c0].[ImageUrl], [c0].[IsActive], [c0].[Name], [c0].[UpdatedAt], [c0].[UpdatedBy], [p].[Id], [p].[CategoryId], [p].[CreatedAt], [p].[CreatedBy], [p].[Description], [p].[DiscountPrice], [p].[ImageUrl], [p].[IsActive], [p].[Name], [p].[Price], [p].[SKU], [p].[StockQuantity], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM (
+    SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[Description], [c].[ImageUrl], [c].[IsActive], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+    FROM [Categories] AS [c]
+    WHERE [c].[Id] = @id
+) AS [c0]
+LEFT JOIN [Products] AS [p] ON [c0].[Id] = [p].[CategoryId]
+ORDER BY [c0].[Id]
+2026-03-30 15:37:18.483 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[ProductService.Application.DTOs.CategoryDto, ProductService.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-30 15:37:18.496 +05:30 [INF] Executed action ProductService.API.Controllers.CategoryController.GetById (ProductService.API) in 503.934ms
+2026-03-30 15:37:18.535 +05:30 [INF] Executed endpoint 'ProductService.API.Controllers.CategoryController.GetById (ProductService.API)'
+2026-03-30 15:37:18.542 +05:30 [INF] HTTP GET /api/v1/categories/1c886dab-6014-4552-aeef-6bd2b3b87303 responded 200 in 608.4441 ms
+2026-03-30 15:37:18.551 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/api/v1/categories/1c886dab-6014-4552-aeef-6bd2b3b87303 - 200 null application/json; charset=utf-8 635.4329ms
+2026-03-30 16:01:48.846 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/index.html - null null
+2026-03-30 16:01:48.925 +05:30 [INF] HTTP GET /swagger/index.html responded 304 in 10.4009 ms
+2026-03-30 16:01:48.934 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/index.html - 304 null null 89.9622ms
+2026-03-30 16:01:49.818 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui.css - null null
+2026-03-30 16:01:49.821 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/index.css - null null
+2026-03-30 16:01:49.825 +05:30 [INF] HTTP GET /swagger/swagger-ui.css responded 304 in 0.6223 ms
+2026-03-30 16:01:49.829 +05:30 [INF] HTTP GET /swagger/index.css responded 304 in 0.1269 ms
+2026-03-30 16:01:49.833 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui.css - 304 null null 15.0487ms
+2026-03-30 16:01:49.835 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui-bundle.js - null null
+2026-03-30 16:01:49.836 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/index.css - 304 null null 15.5074ms
+2026-03-30 16:01:49.850 +05:30 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 304 in 0.1574 ms
+2026-03-30 16:01:49.862 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui-bundle.js - 304 null null 26.1934ms
+2026-03-30 16:01:50.117 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui-standalone-preset.js - null null
+2026-03-30 16:01:50.125 +05:30 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 304 in 0.1289 ms
+2026-03-30 16:01:50.132 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui-standalone-preset.js - 304 null null 15.5801ms
+2026-03-30 16:01:50.291 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-30 16:01:50.302 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/_framework/aspnetcore-browser-refresh.js - 200 14941 application/javascript; charset=utf-8 10.8741ms
+2026-03-30 16:01:50.322 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/index.js - null null
+2026-03-30 16:01:50.332 +05:30 [INF] HTTP GET /swagger/index.js responded 304 in 0.8923 ms
+2026-03-30 16:01:50.337 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/index.js - 304 null null 15.0182ms
+2026-03-30 16:01:50.577 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/_vs/browserLink - null null
+2026-03-30 16:01:50.596 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19.3691ms
+2026-03-30 16:01:50.894 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/v1/swagger.json - null null
+2026-03-30 16:01:50.960 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/favicon-32x32.png - null null
+2026-03-30 16:01:50.970 +05:30 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 68.3768 ms
+2026-03-30 16:01:50.970 +05:30 [INF] HTTP GET /swagger/favicon-32x32.png responded 304 in 0.1320 ms
+2026-03-30 16:01:50.976 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 82.1715ms
+2026-03-30 16:01:50.982 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/favicon-32x32.png - 304 null null 21.8986ms

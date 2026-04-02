@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using Microsoft.Extensions.Configuration;
+using NotificationService.Application.Interfaces;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
+using Twilio.Types;
+
+namespace NotificationService.Infrastructure.Services;
+
+public class TwilioWhatsAppService : IWhatsAppService
+{
+    private readonly IConfiguration _config;
+    public TwilioWhatsAppService(IConfiguration config) => _config = config;
+
+    public async Task SendAsync(string phoneNumber, string message)
+    {
+        TwilioClient.Init(_config["Twilio:AccountSid"], _config["Twilio:AuthToken"]);
+        await MessageResource.CreateAsync(
+            from: new PhoneNumber($"whatsapp:{_config["Twilio:WhatsAppFrom"]}"),
+            to: new PhoneNumber($"whatsapp:{phoneNumber}"),
+            body: message
+        );
+    }
+}

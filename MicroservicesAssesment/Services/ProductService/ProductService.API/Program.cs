@@ -1,0 +1,91 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi;
+using ProductService.API.Middleware;
+using ProductService.Application.Interfaces;
+using ProductService.Application.Mappings;
+using ProductService.Application.Services;
+using ProductService.Application.Validators;
+using ProductService.Domain.Interfaces;
+using ProductService.Infrastructure.Data;
+using ProductService.Infrastructure.Repositories;
+using Serilog;
+using System.Text;
+
+var builder = WebApplication.CreateBuilder(args);
+
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("Logs/productservice-.log", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+builder.Host.UseSerilog();
+
+builder.Services.AddDbContext<ProductDbContext>(o =>
+    o.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+var jwt = builder.Configuration.GetSection("JwtSettings");
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(o =>
+    {
+        o.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidIssuer = jwt["Issuer"],
+            ValidateAudience = true,
+            ValidAudience = jwt["Audience"],
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwt["SecretKey"]!)),
+            ValidateLifetime = true,
+            ClockSkew = TimeSpan.Zero
+        };
+    });
+
+builder.Services.AddAuthorization();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IProductService, ProductAppService>();
+builder.Services.AddScoped<ICategoryService, CategoryAppService>();
+builder.Services.AddAutoMapper(cfg => cfg.AddProfile<ProductMappingProfile>());
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddValidatorsFromAssemblyContaining<CreateProductValidator>();
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    var jwtSecurityScheme = new OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header
+    };
+
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Product Service API", Version = "v1" });
+    c.AddSecurityDefinition("Bearer", jwtSecurityScheme);
+    c.AddSecurityRequirement(document => new OpenApiSecurityRequirement
+    {
+        [new OpenApiSecuritySchemeReference("Bearer", document)] = []
+    });
+});
+builder.Services.AddCors(o => o.AddPolicy("AllowAll", p => p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
+
+var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ProductDbContext>();
+    db.Database.Migrate();
+}
+app.UseMiddleware<GlobalExceptionMiddleware>();
+app.UseCors("AllowAll");
+app.UseStaticFiles();
+app.UseSerilogRequestLogging();
+if (app.Environment.IsDevelopment()) { app.UseSwagger(); app.UseSwaggerUI(); }
+app.UseAuthentication();
+app.UseAuthorization();
+app.MapControllers();
+app.Run();

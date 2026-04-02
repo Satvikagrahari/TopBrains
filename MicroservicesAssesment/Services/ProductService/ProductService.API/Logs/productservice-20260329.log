@@ -1,0 +1,496 @@
+2026-03-29 17:54:09.112 +05:30 [INF] Executed DbCommand (207ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [ECommerceMSProductDb];
+2026-03-29 17:54:09.210 +05:30 [INF] Executed DbCommand (67ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [ECommerceMSProductDb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2026-03-29 17:54:09.228 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-29 17:54:09.231 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-03-29 17:54:09.257 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-03-29 17:54:09.316 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-03-29 17:54:09.324 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-29 17:54:09.325 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-03-29 17:54:09.339 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-03-29 17:54:09.348 +05:30 [INF] Applying migration '20260329122348_InitialCreate'.
+2026-03-29 17:54:09.367 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(100) NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [ImageUrl] nvarchar(max) NULL,
+    [IsActive] bit NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id])
+);
+2026-03-29 17:54:09.373 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [Price] decimal(18,2) NOT NULL,
+    [DiscountPrice] decimal(18,2) NULL,
+    [StockQuantity] int NOT NULL,
+    [ImageUrl] nvarchar(max) NULL,
+    [SKU] nvarchar(50) NOT NULL,
+    [IsActive] bit NOT NULL,
+    [CategoryId] uniqueidentifier NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Products_Categories_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Categories] ([Id]) ON DELETE CASCADE
+);
+2026-03-29 17:54:09.374 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Products_CategoryId] ON [Products] ([CategoryId]);
+2026-03-29 17:54:09.375 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Products_SKU] ON [Products] ([SKU]);
+2026-03-29 17:54:09.379 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20260329122348_InitialCreate', N'10.0.5');
+2026-03-29 17:54:09.383 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-03-29 20:53:49.089 +05:30 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-29 20:53:49.189 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-03-29 20:53:49.223 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-03-29 20:53:49.396 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-03-29 20:53:49.435 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-29 20:53:49.442 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-03-29 20:53:49.490 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-03-29 20:53:49.521 +05:30 [INF] No migrations were applied. The database is already up to date.
+2026-03-29 20:53:49.532 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-03-29 20:53:49.875 +05:30 [INF] User profile is available. Using 'C:\Users\Srikrishna\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-29 20:53:50.160 +05:30 [WRN] The WebRootPath was not found: D:\DotNetCorePractise\MicroservicesAssesment\Services\ProductService\ProductService.API\wwwroot. Static files may be unavailable.
+2026-03-29 20:53:50.359 +05:30 [INF] Now listening on: https://localhost:5021
+2026-03-29 20:53:50.365 +05:30 [INF] Now listening on: http://localhost:5020
+2026-03-29 20:53:51.002 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-29 20:53:51.023 +05:30 [INF] Hosting environment: Development
+2026-03-29 20:53:51.024 +05:30 [INF] Content root path: D:\DotNetCorePractise\MicroservicesAssesment\Services\ProductService\ProductService.API
+2026-03-29 20:53:52.230 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5021/ - null null
+2026-03-29 20:53:54.916 +05:30 [INF] HTTP GET / responded 404 in 2388.6902 ms
+2026-03-29 20:53:54.942 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5021/ - 404 null null 2713.3905ms
+2026-03-29 20:53:54.961 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5021/, Response status code: 404
+2026-03-29 20:56:26.420 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-29 20:56:26.505 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-03-29 20:56:26.536 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-03-29 20:56:26.663 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-03-29 20:56:26.680 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-29 20:56:26.685 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-03-29 20:56:26.707 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-03-29 20:56:26.722 +05:30 [INF] No migrations were applied. The database is already up to date.
+2026-03-29 20:56:26.727 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-03-29 20:56:26.920 +05:30 [INF] User profile is available. Using 'C:\Users\Srikrishna\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-29 20:56:27.112 +05:30 [WRN] The WebRootPath was not found: D:\DotNetCorePractise\MicroservicesAssesment\Services\ProductService\ProductService.API\wwwroot. Static files may be unavailable.
+2026-03-29 20:56:27.331 +05:30 [INF] Now listening on: https://localhost:5021
+2026-03-29 20:56:27.340 +05:30 [INF] Now listening on: http://localhost:5020
+2026-03-29 20:56:27.500 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-29 20:56:27.502 +05:30 [INF] Hosting environment: Development
+2026-03-29 20:56:27.504 +05:30 [INF] Content root path: D:\DotNetCorePractise\MicroservicesAssesment\Services\ProductService\ProductService.API
+2026-03-29 20:56:28.368 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5021/ - null null
+2026-03-29 20:56:28.705 +05:30 [INF] HTTP GET / responded 404 in 123.4755 ms
+2026-03-29 20:56:28.717 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5021/ - 404 null null 352.2751ms
+2026-03-29 20:56:28.725 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5021/, Response status code: 404
+2026-03-29 20:56:48.006 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger - null null
+2026-03-29 20:56:48.015 +05:30 [INF] HTTP GET /swagger responded 301 in 1.6255 ms
+2026-03-29 20:56:48.033 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger - 301 null null 26.308ms
+2026-03-29 20:56:48.036 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/index.html - null null
+2026-03-29 20:56:48.119 +05:30 [INF] HTTP GET /swagger/index.html responded 200 in 77.6662 ms
+2026-03-29 20:56:48.123 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/index.html - 200 null text/html;charset=utf-8 86.2105ms
+2026-03-29 20:56:48.147 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui.css - null null
+2026-03-29 20:56:48.152 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/index.css - null null
+2026-03-29 20:56:48.156 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-29 20:56:48.156 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui-standalone-preset.js - null null
+2026-03-29 20:56:48.156 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/index.js - null null
+2026-03-29 20:56:48.166 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/_framework/aspnetcore-browser-refresh.js - 200 14941 application/javascript; charset=utf-8 9.7495ms
+2026-03-29 20:56:48.154 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui-bundle.js - null null
+2026-03-29 20:56:48.165 +05:30 [INF] HTTP GET /swagger/index.css responded 200 in 4.8280 ms
+2026-03-29 20:56:48.166 +05:30 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 15.8290 ms
+2026-03-29 20:56:48.179 +05:30 [INF] HTTP GET /swagger/index.js responded 200 in 1.7597 ms
+2026-03-29 20:56:48.187 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/index.css - 200 152 text/css 34.1514ms
+2026-03-29 20:56:48.187 +05:30 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 21.6666 ms
+2026-03-29 20:56:48.189 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui.css - 200 26479 text/css 41.7258ms
+2026-03-29 20:56:48.192 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/index.js - 200 null application/javascript;charset=utf-8 35.2943ms
+2026-03-29 20:56:48.195 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/_vs/browserLink - null null
+2026-03-29 20:56:48.196 +05:30 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 11.3205 ms
+2026-03-29 20:56:48.198 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui-standalone-preset.js - 200 76613 text/javascript 41.3569ms
+2026-03-29 20:56:48.209 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui-bundle.js - 200 418181 text/javascript 55.1313ms
+2026-03-29 20:56:48.249 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/_vs/browserLink - 200 null text/javascript; charset=UTF-8 54.3772ms
+2026-03-29 20:56:48.368 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/v1/swagger.json - null null
+2026-03-29 20:56:48.383 +05:30 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 12.1504 ms
+2026-03-29 20:56:48.385 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.9016ms
+2026-03-29 20:56:48.395 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/favicon-32x32.png - null null
+2026-03-29 20:56:48.415 +05:30 [INF] HTTP GET /swagger/favicon-32x32.png responded 200 in 16.3820 ms
+2026-03-29 20:56:48.417 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/favicon-32x32.png - 200 628 image/png 21.6678ms
+2026-03-29 20:57:08.765 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/api/v1/products - null null
+2026-03-29 20:57:08.885 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: '_8baCqeTu3OmEX6RE-NqGW6_LGya5Htjzz-S9sKCJWU'. , KeyId: 
+'.
+Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'.
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-03-29 20:57:08.901 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: '_8baCqeTu3OmEX6RE-NqGW6_LGya5Htjzz-S9sKCJWU'. , KeyId: 
+'.
+Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'.
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-03-29 20:57:08.904 +05:30 [INF] Executing endpoint 'ProductService.API.Controllers.ProductController.GetAll (ProductService.API)'
+2026-03-29 20:57:08.937 +05:30 [INF] Route matched with {action = "GetAll", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.String, System.String, System.Nullable`1[System.Decimal], System.Nullable`1[System.Decimal]) on controller ProductService.API.Controllers.ProductController (ProductService.API).
+2026-03-29 20:57:09.023 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-29 20:57:09.409 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[CreatedAt], [p].[CreatedBy], [p].[Description], [p].[DiscountPrice], [p].[ImageUrl], [p].[IsActive], [p].[Name], [p].[Price], [p].[SKU], [p].[StockQuantity], [p].[UpdatedAt], [p].[UpdatedBy], [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[Description], [c].[ImageUrl], [c].[IsActive], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+ORDER BY [p].[CreatedAt] DESC
+2026-03-29 20:57:09.453 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[ProductService.Application.DTOs.ProductDto, ProductService.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-29 20:57:09.477 +05:30 [INF] Executed action ProductService.API.Controllers.ProductController.GetAll (ProductService.API) in 535.0271ms
+2026-03-29 20:57:09.479 +05:30 [INF] Executed endpoint 'ProductService.API.Controllers.ProductController.GetAll (ProductService.API)'
+2026-03-29 20:57:09.481 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 696.5695 ms
+2026-03-29 20:57:09.486 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/api/v1/products - 200 null application/json; charset=utf-8 721.0527ms
+2026-03-29 21:19:06.318 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-29 21:19:06.410 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-03-29 21:19:06.442 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-03-29 21:19:06.559 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-03-29 21:19:06.574 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-29 21:19:06.579 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-03-29 21:19:06.588 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-03-29 21:19:06.605 +05:30 [INF] No migrations were applied. The database is already up to date.
+2026-03-29 21:19:06.609 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-03-29 21:19:06.884 +05:30 [INF] User profile is available. Using 'C:\Users\Srikrishna\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-29 21:19:07.112 +05:30 [WRN] The WebRootPath was not found: D:\DotNetCorePractise\MicroservicesAssesment\Services\ProductService\ProductService.API\wwwroot. Static files may be unavailable.
+2026-03-29 21:19:07.365 +05:30 [INF] Now listening on: https://localhost:5021
+2026-03-29 21:19:07.374 +05:30 [INF] Now listening on: http://localhost:5020
+2026-03-29 21:19:07.760 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-29 21:19:07.763 +05:30 [INF] Hosting environment: Development
+2026-03-29 21:19:07.767 +05:30 [INF] Content root path: D:\DotNetCorePractise\MicroservicesAssesment\Services\ProductService\ProductService.API
+2026-03-29 21:19:08.276 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5021/ - null null
+2026-03-29 21:19:08.608 +05:30 [INF] HTTP GET / responded 404 in 118.0395 ms
+2026-03-29 21:19:08.623 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5021/ - 404 null null 349.8202ms
+2026-03-29 21:19:08.650 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5021/, Response status code: 404
+2026-03-29 21:20:27.685 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/index.html - null null
+2026-03-29 21:20:27.752 +05:30 [INF] HTTP GET /swagger/index.html responded 304 in 50.9629 ms
+2026-03-29 21:20:27.760 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/index.html - 304 null null 74.6396ms
+2026-03-29 21:20:27.791 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui.css - null null
+2026-03-29 21:20:27.797 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-29 21:20:27.797 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui-bundle.js - null null
+2026-03-29 21:20:27.791 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/index.css - null null
+2026-03-29 21:20:27.813 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/_framework/aspnetcore-browser-refresh.js - 200 14941 application/javascript; charset=utf-8 15.4478ms
+2026-03-29 21:20:27.802 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui-standalone-preset.js - null null
+2026-03-29 21:20:27.807 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/index.js - null null
+2026-03-29 21:20:27.821 +05:30 [INF] HTTP GET /swagger/index.css responded 304 in 2.2849 ms
+2026-03-29 21:20:27.821 +05:30 [INF] HTTP GET /swagger/swagger-ui.css responded 304 in 13.1308 ms
+2026-03-29 21:20:27.824 +05:30 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 304 in 12.6475 ms
+2026-03-29 21:20:27.836 +05:30 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 304 in 12.2203 ms
+2026-03-29 21:20:27.838 +05:30 [INF] HTTP GET /swagger/index.js responded 304 in 0.5728 ms
+2026-03-29 21:20:27.839 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/index.css - 304 null null 47.8739ms
+2026-03-29 21:20:27.840 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui.css - 304 null null 49.3617ms
+2026-03-29 21:20:27.842 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui-bundle.js - 304 null null 44.9434ms
+2026-03-29 21:20:27.844 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/swagger-ui-standalone-preset.js - 304 null null 45.4296ms
+2026-03-29 21:20:27.846 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/index.js - 304 null null 39.5107ms
+2026-03-29 21:20:27.853 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/_vs/browserLink - null null
+2026-03-29 21:20:27.901 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.4679ms
+2026-03-29 21:20:28.017 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/swagger/v1/swagger.json - null null
+2026-03-29 21:20:28.038 +05:30 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 18.1490 ms
+2026-03-29 21:20:28.040 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 23.4521ms
+2026-03-29 21:20:50.315 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/api/v1/products - null null
+2026-03-29 21:20:50.367 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: '_8baCqeTu3OmEX6RE-NqGW6_LGya5Htjzz-S9sKCJWU'. , KeyId: 
+'.
+Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'.
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-03-29 21:20:50.386 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: '_8baCqeTu3OmEX6RE-NqGW6_LGya5Htjzz-S9sKCJWU'. , KeyId: 
+'.
+Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'.
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-03-29 21:20:50.387 +05:30 [INF] Executing endpoint 'ProductService.API.Controllers.ProductController.GetAll (ProductService.API)'
+2026-03-29 21:20:50.419 +05:30 [INF] Route matched with {action = "GetAll", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.String, System.String, System.Nullable`1[System.Decimal], System.Nullable`1[System.Decimal]) on controller ProductService.API.Controllers.ProductController (ProductService.API).
+2026-03-29 21:20:50.513 +05:30 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-29 21:20:50.911 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[CreatedAt], [p].[CreatedBy], [p].[Description], [p].[DiscountPrice], [p].[ImageUrl], [p].[IsActive], [p].[Name], [p].[Price], [p].[SKU], [p].[StockQuantity], [p].[UpdatedAt], [p].[UpdatedBy], [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[Description], [c].[ImageUrl], [c].[IsActive], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+WHERE [p].[IsActive] = CAST(1 AS bit)
+ORDER BY [p].[CreatedAt] DESC
+2026-03-29 21:20:51.069 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[ProductService.Application.DTOs.ProductDto, ProductService.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-29 21:20:51.102 +05:30 [INF] Executed action ProductService.API.Controllers.ProductController.GetAll (ProductService.API) in 678.8218ms
+2026-03-29 21:20:51.104 +05:30 [INF] Executed endpoint 'ProductService.API.Controllers.ProductController.GetAll (ProductService.API)'
+2026-03-29 21:20:51.108 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 787.0312 ms
+2026-03-29 21:20:51.113 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/api/v1/products - 200 null application/json; charset=utf-8 798.0995ms
+2026-03-29 21:21:45.142 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5020/api/v1/categories - null null
+2026-03-29 21:21:45.150 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: '_8baCqeTu3OmEX6RE-NqGW6_LGya5Htjzz-S9sKCJWU'. , KeyId: 
+'.
+Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'.
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-03-29 21:21:45.153 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: '_8baCqeTu3OmEX6RE-NqGW6_LGya5Htjzz-S9sKCJWU'. , KeyId: 
+'.
+Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'.
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-03-29 21:21:45.154 +05:30 [INF] Executing endpoint 'ProductService.API.Controllers.CategoryController.GetAll (ProductService.API)'
+2026-03-29 21:21:45.162 +05:30 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ProductService.API.Controllers.CategoryController (ProductService.API).
+2026-03-29 21:21:45.273 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[Description], [c].[ImageUrl], [c].[IsActive], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy], [p].[Id], [p].[CategoryId], [p].[CreatedAt], [p].[CreatedBy], [p].[Description], [p].[DiscountPrice], [p].[ImageUrl], [p].[IsActive], [p].[Name], [p].[Price], [p].[SKU], [p].[StockQuantity], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [Categories] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[Id] = [p].[CategoryId]
+WHERE [c].[IsActive] = CAST(1 AS bit)
+ORDER BY [c].[Id]
+2026-03-29 21:21:45.284 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[ProductService.Application.DTOs.CategoryDto, ProductService.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-29 21:21:45.289 +05:30 [INF] Executed action ProductService.API.Controllers.CategoryController.GetAll (ProductService.API) in 125.8295ms
+2026-03-29 21:21:45.291 +05:30 [INF] Executed endpoint 'ProductService.API.Controllers.CategoryController.GetAll (ProductService.API)'
+2026-03-29 21:21:45.292 +05:30 [INF] HTTP GET /api/v1/categories responded 200 in 145.9477 ms
+2026-03-29 21:21:45.294 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5020/api/v1/categories - 200 null application/json; charset=utf-8 152.2496ms
+2026-03-29 21:24:32.606 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5020/api/v1/products - application/json 236
+2026-03-29 21:24:32.610 +05:30 [INF] CORS policy execution successful.
+2026-03-29 21:24:32.626 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: '_8baCqeTu3OmEX6RE-NqGW6_LGya5Htjzz-S9sKCJWU'. , KeyId: 
+'.
+Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'.
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-03-29 21:24:32.629 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: '_8baCqeTu3OmEX6RE-NqGW6_LGya5Htjzz-S9sKCJWU'. , KeyId: 
+'.
+Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'.
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-03-29 21:24:32.635 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|StoreManager)
+2026-03-29 21:24:32.641 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-29 21:24:32.642 +05:30 [INF] HTTP POST /api/v1/products responded 401 in 16.3958 ms
+2026-03-29 21:24:32.644 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5020/api/v1/products - 401 0 null 38.0415ms
+2026-03-29 21:26:33.013 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5020/api/v1/products - application/json 236
+2026-03-29 21:26:33.016 +05:30 [INF] CORS policy execution successful.
+2026-03-29 21:26:33.037 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '28-03-2026 11:22:34', Current time (UTC): '29-03-2026 15:56:33'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-03-29 21:26:33.040 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '28-03-2026 11:22:34', Current time (UTC): '29-03-2026 15:56:33'.
+2026-03-29 21:26:33.042 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|StoreManager)
+2026-03-29 21:26:33.043 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-29 21:26:33.044 +05:30 [INF] HTTP POST /api/v1/products responded 401 in 27.4191 ms
+2026-03-29 21:26:33.046 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5020/api/v1/products - 401 0 null 32.8938ms
+2026-03-29 21:26:37.625 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5020/api/v1/products - application/json 236
+2026-03-29 21:26:37.627 +05:30 [INF] CORS policy execution successful.
+2026-03-29 21:26:37.629 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '28-03-2026 11:22:34', Current time (UTC): '29-03-2026 15:56:37'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-03-29 21:26:37.631 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '28-03-2026 11:22:34', Current time (UTC): '29-03-2026 15:56:37'.
+2026-03-29 21:26:37.634 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|StoreManager)
+2026-03-29 21:26:37.635 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-29 21:26:37.636 +05:30 [INF] HTTP POST /api/v1/products responded 401 in 7.7618 ms
+2026-03-29 21:26:37.637 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5020/api/v1/products - 401 0 null 12.5405ms
+2026-03-29 21:28:40.482 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5020/api/v1/products - application/json 236
+2026-03-29 21:28:40.485 +05:30 [INF] CORS policy execution successful.
+2026-03-29 21:28:40.502 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: '_8baCqeTu3OmEX6RE-NqGW6_LGya5Htjzz-S9sKCJWU'. , KeyId: 
+'.
+Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'.
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-03-29 21:28:40.505 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: '_8baCqeTu3OmEX6RE-NqGW6_LGya5Htjzz-S9sKCJWU'. , KeyId: 
+'.
+Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'.
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-03-29 21:28:40.506 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|StoreManager)
+2026-03-29 21:28:40.506 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-29 21:28:40.508 +05:30 [INF] HTTP POST /api/v1/products responded 401 in 21.6012 ms
+2026-03-29 21:28:40.509 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5020/api/v1/products - 401 0 null 26.8616ms
+2026-03-29 21:28:43.913 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5020/api/v1/products - application/json 236
+2026-03-29 21:28:43.915 +05:30 [INF] CORS policy execution successful.
+2026-03-29 21:28:43.917 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: '_8baCqeTu3OmEX6RE-NqGW6_LGya5Htjzz-S9sKCJWU'. , KeyId: 
+'.
+Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'.
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-03-29 21:28:43.920 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: '_8baCqeTu3OmEX6RE-NqGW6_LGya5Htjzz-S9sKCJWU'. , KeyId: 
+'.
+Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'.
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-03-29 21:28:43.921 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|StoreManager)
+2026-03-29 21:28:43.921 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-29 21:28:43.923 +05:30 [INF] HTTP POST /api/v1/products responded 401 in 6.3960 ms
+2026-03-29 21:28:43.924 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5020/api/v1/products - 401 0 null 11.4894ms
+2026-03-29 21:28:46.027 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5020/api/v1/products - application/json 236
+2026-03-29 21:28:46.030 +05:30 [INF] CORS policy execution successful.
+2026-03-29 21:28:46.031 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: '_8baCqeTu3OmEX6RE-NqGW6_LGya5Htjzz-S9sKCJWU'. , KeyId: 
+'.
+Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'.
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-03-29 21:28:46.034 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: '_8baCqeTu3OmEX6RE-NqGW6_LGya5Htjzz-S9sKCJWU'. , KeyId: 
+'.
+Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'.
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-03-29 21:28:46.035 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|StoreManager)
+2026-03-29 21:28:46.035 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-29 21:28:46.036 +05:30 [INF] HTTP POST /api/v1/products responded 401 in 5.8085 ms
+2026-03-29 21:28:46.038 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5020/api/v1/products - 401 0 null 10.2255ms
+2026-03-29 21:32:32.886 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5020/api/v1/products - application/json 236
+2026-03-29 21:32:32.888 +05:30 [INF] CORS policy execution successful.
+2026-03-29 21:32:32.915 +05:30 [INF] Executing endpoint 'ProductService.API.Controllers.ProductController.Create (ProductService.API)'
+2026-03-29 21:32:32.922 +05:30 [INF] Route matched with {action = "Create", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ProductService.Application.DTOs.CreateProductDto) on controller ProductService.API.Controllers.ProductController (ProductService.API).
+2026-03-29 21:32:33.232 +05:30 [INF] Executed DbCommand (101ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (Size = 200), @p9='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p10='?' (Size = 50), @p11='?' (DbType = Int32), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Id], [CategoryId], [CreatedAt], [CreatedBy], [Description], [DiscountPrice], [ImageUrl], [IsActive], [Name], [Price], [SKU], [StockQuantity], [UpdatedAt], [UpdatedBy])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2026-03-29 21:32:33.271 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CategoryId], [p].[CreatedAt], [p].[CreatedBy], [p].[Description], [p].[DiscountPrice], [p].[ImageUrl], [p].[IsActive], [p].[Name], [p].[Price], [p].[SKU], [p].[StockQuantity], [p].[UpdatedAt], [p].[UpdatedBy], [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[Description], [c].[ImageUrl], [c].[IsActive], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+WHERE [p].[Id] = @id
+2026-03-29 21:32:33.278 +05:30 [INF] Executing CreatedAtActionResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[ProductService.Application.DTOs.ProductDto, ProductService.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-29 21:32:33.297 +05:30 [INF] Executed action ProductService.API.Controllers.ProductController.Create (ProductService.API) in 374.0389ms
+2026-03-29 21:32:33.299 +05:30 [INF] Executed endpoint 'ProductService.API.Controllers.ProductController.Create (ProductService.API)'
+2026-03-29 21:32:33.300 +05:30 [INF] HTTP POST /api/v1/products responded 201 in 410.6069 ms
+2026-03-29 21:32:33.301 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5020/api/v1/products - 201 null application/json; charset=utf-8 415.4824ms

@@ -1,0 +1,303 @@
+2026-03-31 14:23:12.636 +05:30 [INF] Executed DbCommand (131ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-31 14:23:13.245 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-03-31 14:23:13.718 +05:30 [INF] Executed DbCommand (415ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-03-31 14:23:14.351 +05:30 [INF] Executed DbCommand (70ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-03-31 14:23:14.466 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-31 14:23:14.588 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-03-31 14:23:15.967 +05:30 [INF] Executed DbCommand (839ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-03-31 14:23:16.226 +05:30 [INF] No migrations were applied. The database is already up to date.
+2026-03-31 14:23:16.538 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-03-31 14:23:17.963 +05:30 [INF] User profile is available. Using 'C:\Users\Satvik\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-31 14:23:21.294 +05:30 [INF] Now listening on: https://localhost:5051
+2026-03-31 14:23:21.506 +05:30 [INF] Now listening on: http://localhost:5050
+2026-03-31 14:23:22.774 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-31 14:23:23.026 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5051/ - null null
+2026-03-31 14:23:23.181 +05:30 [INF] Hosting environment: Development
+2026-03-31 14:23:24.022 +05:30 [INF] Content root path: C:\Users\Satvik\Desktop\capg\MicroservicesAssesment\Services\PaymentService\PaymentService.API
+2026-03-31 14:23:31.966 +05:30 [INF] HTTP GET / responded 404 in 5046.7459 ms
+2026-03-31 14:23:32.365 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5051/ - 404 null null 9365.8197ms
+2026-03-31 14:23:32.615 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5051/, Response status code: 404
+2026-03-31 14:26:02.121 +05:30 [INF] Executed DbCommand (117ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-31 14:26:02.612 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-03-31 14:26:02.841 +05:30 [INF] Executed DbCommand (92ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-03-31 14:26:03.707 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-03-31 14:26:03.836 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-31 14:26:04.100 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-03-31 14:26:04.200 +05:30 [INF] Executed DbCommand (79ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-03-31 14:26:04.328 +05:30 [INF] No migrations were applied. The database is already up to date.
+2026-03-31 14:26:04.476 +05:30 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-03-31 14:26:05.578 +05:30 [INF] User profile is available. Using 'C:\Users\Satvik\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-31 14:26:08.381 +05:30 [INF] Now listening on: https://localhost:5051
+2026-03-31 14:26:08.651 +05:30 [INF] Now listening on: http://localhost:5050
+2026-03-31 14:26:10.543 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5051/ - null null
+2026-03-31 14:26:11.917 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-31 14:26:12.147 +05:30 [INF] Hosting environment: Development
+2026-03-31 14:26:12.543 +05:30 [INF] Content root path: C:\Users\Satvik\Desktop\capg\MicroservicesAssesment\Services\PaymentService\PaymentService.API
+2026-03-31 14:26:14.186 +05:30 [INF] HTTP GET / responded 404 in 838.6819 ms
+2026-03-31 14:26:14.778 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5051/ - 404 null null 4249.9761ms
+2026-03-31 14:26:15.392 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5051/, Response status code: 404
+2026-03-31 14:28:04.145 +05:30 [INF] Executed DbCommand (121ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-31 14:28:04.584 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-03-31 14:28:04.812 +05:30 [INF] Executed DbCommand (129ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-03-31 14:28:05.528 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-03-31 14:28:05.634 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-31 14:28:05.667 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-03-31 14:28:05.810 +05:30 [INF] Executed DbCommand (94ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-03-31 14:28:05.865 +05:30 [INF] No migrations were applied. The database is already up to date.
+2026-03-31 14:28:05.999 +05:30 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-03-31 14:28:06.818 +05:30 [INF] User profile is available. Using 'C:\Users\Satvik\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-31 14:28:08.835 +05:30 [INF] Now listening on: https://localhost:5051
+2026-03-31 14:28:09.015 +05:30 [INF] Now listening on: http://localhost:5050
+2026-03-31 14:28:10.839 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5051/ - null null
+2026-03-31 14:28:12.280 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-31 14:28:12.388 +05:30 [INF] Hosting environment: Development
+2026-03-31 14:28:12.483 +05:30 [INF] Content root path: C:\Users\Satvik\Desktop\capg\MicroservicesAssesment\Services\PaymentService\PaymentService.API
+2026-03-31 14:28:13.855 +05:30 [INF] HTTP GET / responded 404 in 645.4631 ms
+2026-03-31 14:28:14.275 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5051/ - 404 null null 3455.5922ms
+2026-03-31 14:28:14.973 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5051/, Response status code: 404
+2026-03-31 14:43:19.419 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5051/swagger - null null
+2026-03-31 14:43:19.599 +05:30 [INF] HTTP GET /swagger responded 301 in 16.9493 ms
+2026-03-31 14:43:19.608 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5051/swagger - 301 null null 190.8714ms
+2026-03-31 14:43:19.615 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5051/swagger/index.html - null null
+2026-03-31 14:43:19.998 +05:30 [INF] HTTP GET /swagger/index.html responded 200 in 361.7702 ms
+2026-03-31 14:43:20.012 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5051/swagger/index.html - 200 null text/html;charset=utf-8 396.6325ms
+2026-03-31 14:43:20.056 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5051/swagger/swagger-ui-bundle.js - null null
+2026-03-31 14:43:20.094 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5051/swagger/index.css - null null
+2026-03-31 14:43:20.053 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5051/swagger/swagger-ui.css - null null
+2026-03-31 14:43:20.105 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5051/swagger/swagger-ui-standalone-preset.js - null null
+2026-03-31 14:43:20.139 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5051/swagger/index.js - null null
+2026-03-31 14:43:20.141 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5051/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-31 14:43:20.241 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5051/_vs/browserLink - null null
+2026-03-31 14:43:20.307 +05:30 [INF] HTTP GET /swagger/index.css responded 200 in 45.6842 ms
+2026-03-31 14:43:20.455 +05:30 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 91.2227 ms
+2026-03-31 14:43:20.457 +05:30 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 176.4426 ms
+2026-03-31 14:43:20.508 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5051/swagger/swagger-ui-standalone-preset.js - 200 76613 text/javascript 402.4509ms
+2026-03-31 14:43:20.493 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5051/swagger/index.css - 200 152 text/css 399.3152ms
+2026-03-31 14:43:20.469 +05:30 [INF] HTTP GET /swagger/index.js responded 200 in 3.6241 ms
+2026-03-31 14:43:20.491 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5051/_framework/aspnetcore-browser-refresh.js - 200 14941 application/javascript; charset=utf-8 350.0755ms
+2026-03-31 14:43:20.457 +05:30 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 208.6452 ms
+2026-03-31 14:43:20.517 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5051/swagger/swagger-ui.css - 200 26479 text/css 463.6416ms
+2026-03-31 14:43:20.544 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5051/swagger/index.js - 200 null application/javascript;charset=utf-8 404.6597ms
+2026-03-31 14:43:20.562 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5051/swagger/swagger-ui-bundle.js - 200 418181 text/javascript 505.3135ms
+2026-03-31 14:43:20.615 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5051/_vs/browserLink - 200 null text/javascript; charset=UTF-8 373.6479ms
+2026-03-31 14:43:20.879 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5051/swagger/v1/swagger.json - null null
+2026-03-31 14:43:20.903 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5051/swagger/favicon-32x32.png - null null
+2026-03-31 14:43:20.949 +05:30 [INF] HTTP GET /swagger/favicon-32x32.png responded 200 in 14.0254 ms
+2026-03-31 14:43:20.997 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5051/swagger/favicon-32x32.png - 200 628 image/png 93.9847ms
+2026-03-31 14:43:21.026 +05:30 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 127.9647 ms
+2026-03-31 14:43:21.043 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5051/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 164.3777ms
+2026-03-31 14:43:45.390 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5051/api/v1/payments/my - null null
+2026-03-31 14:43:45.836 +05:30 [INF] Executing endpoint 'PaymentService.API.Controllers.PaymentController.GetMyPayments (PaymentService.API)'
+2026-03-31 14:43:45.905 +05:30 [INF] Route matched with {action = "GetMyPayments", controller = "Payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyPayments() on controller PaymentService.API.Controllers.PaymentController (PaymentService.API).
+2026-03-31 14:43:47.859 +05:30 [INF] Executed DbCommand (396ms) [Parameters=[@userId='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Amount], [p].[CreatedAt], [p].[CreatedBy], [p].[Currency], [p].[FailureReason], [p].[Method], [p].[OrderId], [p].[PaidAt], [p].[RazorpayOrderId], [p].[RazorpayPaymentId], [p].[RazorpaySignature], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy], [p].[UserId]
+FROM [Payments] AS [p]
+WHERE [p].[UserId] = @userId
+ORDER BY [p].[CreatedAt] DESC
+2026-03-31 14:43:47.964 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[PaymentService.Application.DTOs.PaymentResponseDto, PaymentService.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 14:43:48.064 +05:30 [INF] Executed action PaymentService.API.Controllers.PaymentController.GetMyPayments (PaymentService.API) in 2126.9609ms
+2026-03-31 14:43:48.075 +05:30 [INF] Executed endpoint 'PaymentService.API.Controllers.PaymentController.GetMyPayments (PaymentService.API)'
+2026-03-31 14:43:48.081 +05:30 [INF] HTTP GET /api/v1/payments/my responded 200 in 2653.6219 ms
+2026-03-31 14:43:48.096 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5051/api/v1/payments/my - 200 null application/json; charset=utf-8 2705.6696ms
+2026-03-31 15:28:16.989 +05:30 [INF] Executed DbCommand (155ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-31 15:28:17.837 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-03-31 15:28:18.346 +05:30 [INF] Executed DbCommand (165ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-03-31 15:28:19.320 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-03-31 15:28:19.540 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-31 15:28:19.643 +05:30 [INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-03-31 15:28:19.913 +05:30 [INF] Executed DbCommand (196ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-03-31 15:28:20.137 +05:30 [INF] No migrations were applied. The database is already up to date.
+2026-03-31 15:28:20.286 +05:30 [INF] Executed DbCommand (74ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-03-31 15:28:21.921 +05:30 [INF] User profile is available. Using 'C:\Users\Satvik\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-31 15:28:24.222 +05:30 [INF] Now listening on: https://localhost:5051
+2026-03-31 15:28:24.301 +05:30 [INF] Now listening on: http://localhost:5050
+2026-03-31 15:28:25.470 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-31 15:28:25.870 +05:30 [INF] Hosting environment: Development
+2026-03-31 15:28:25.984 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5051/ - null null
+2026-03-31 15:28:26.236 +05:30 [INF] Content root path: C:\Users\Satvik\Desktop\capg\MicroservicesAssesment\Services\PaymentService\PaymentService.API
+2026-03-31 15:28:28.802 +05:30 [INF] HTTP GET / responded 404 in 616.1894 ms
+2026-03-31 15:28:29.332 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5051/ - 404 null null 3435.0625ms
+2026-03-31 15:28:30.312 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5051/, Response status code: 404
+2026-03-31 15:30:58.697 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5050/swagger/index.html - null null
+2026-03-31 15:30:59.067 +05:30 [INF] HTTP GET /swagger/index.html responded 200 in 282.0671 ms
+2026-03-31 15:30:59.082 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5050/swagger/index.html - 200 null text/html;charset=utf-8 386.8893ms
+2026-03-31 15:30:59.101 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5050/swagger/swagger-ui.css - null null
+2026-03-31 15:30:59.145 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5050/swagger/swagger-ui-standalone-preset.js - null null
+2026-03-31 15:30:59.143 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5050/swagger/index.css - null null
+2026-03-31 15:30:59.186 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5050/swagger/swagger-ui-bundle.js - null null
+2026-03-31 15:30:59.218 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5050/swagger/index.js - null null
+2026-03-31 15:30:59.327 +05:30 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 47.5294 ms
+2026-03-31 15:30:59.325 +05:30 [INF] HTTP GET /swagger/index.css responded 200 in 24.0873 ms
+2026-03-31 15:30:59.276 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5050/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-31 15:30:59.402 +05:30 [INF] HTTP GET /swagger/index.js responded 200 in 17.4579 ms
+2026-03-31 15:30:59.429 +05:30 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 116.3132 ms
+2026-03-31 15:30:59.430 +05:30 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 142.1031 ms
+2026-03-31 15:30:59.445 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5050/swagger/swagger-ui.css - 200 26479 text/css 343.5962ms
+2026-03-31 15:30:59.457 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5050/swagger/index.css - 200 152 text/css 314.424ms
+2026-03-31 15:30:59.501 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5050/swagger/index.js - 200 null application/javascript;charset=utf-8 283.267ms
+2026-03-31 15:30:59.504 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5050/_framework/aspnetcore-browser-refresh.js - 200 14941 application/javascript; charset=utf-8 228.1911ms
+2026-03-31 15:30:59.512 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5050/swagger/swagger-ui-bundle.js - 200 418181 text/javascript 326.2031ms
+2026-03-31 15:30:59.517 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5050/swagger/swagger-ui-standalone-preset.js - 200 76613 text/javascript 371.7448ms
+2026-03-31 15:30:59.539 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5050/_vs/browserLink - null null
+2026-03-31 15:30:59.720 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5050/_vs/browserLink - 200 null text/javascript; charset=UTF-8 181.3407ms
+2026-03-31 15:30:59.831 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5050/swagger/v1/swagger.json - null null
+2026-03-31 15:30:59.929 +05:30 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 79.8887 ms
+2026-03-31 15:30:59.943 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5050/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 112.3407ms
+2026-03-31 16:12:04.212 +05:30 [INF] Executed DbCommand (101ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-31 16:12:04.848 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-03-31 16:12:05.477 +05:30 [INF] Executed DbCommand (297ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-03-31 16:12:06.993 +05:30 [INF] Executed DbCommand (525ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-03-31 16:12:07.278 +05:30 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-31 16:12:07.382 +05:30 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-03-31 16:12:07.937 +05:30 [INF] Executed DbCommand (459ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-03-31 16:12:08.035 +05:30 [INF] No migrations were applied. The database is already up to date.
+2026-03-31 16:12:08.170 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-03-31 16:12:10.662 +05:30 [INF] User profile is available. Using 'C:\Users\Satvik\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-31 16:12:13.603 +05:30 [INF] Now listening on: https://localhost:5051
+2026-03-31 16:12:13.916 +05:30 [INF] Now listening on: http://localhost:5050
+2026-03-31 16:12:14.892 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-31 16:12:15.256 +05:30 [INF] Hosting environment: Development
+2026-03-31 16:12:15.384 +05:30 [INF] Content root path: C:\Users\Satvik\Desktop\capg\MicroservicesAssesment\Services\PaymentService\PaymentService.API
+2026-03-31 16:12:15.418 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5051/ - null null
+2026-03-31 16:12:17.970 +05:30 [INF] HTTP GET / responded 404 in 556.4427 ms
+2026-03-31 16:12:18.868 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5051/ - 404 null null 3466.1403ms
+2026-03-31 16:12:19.471 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5051/, Response status code: 404
+2026-03-31 16:30:59.898 +05:30 [INF] Executed DbCommand (191ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-31 16:31:00.521 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-03-31 16:31:00.787 +05:30 [INF] Executed DbCommand (227ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-03-31 16:31:01.360 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-03-31 16:31:01.488 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-31 16:31:01.542 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-03-31 16:31:01.616 +05:30 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-03-31 16:31:01.801 +05:30 [INF] No migrations were applied. The database is already up to date.
+2026-03-31 16:31:01.895 +05:30 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-03-31 16:31:02.910 +05:30 [INF] User profile is available. Using 'C:\Users\Satvik\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-31 16:31:04.659 +05:30 [INF] Now listening on: https://localhost:5051
+2026-03-31 16:31:04.731 +05:30 [INF] Now listening on: http://localhost:5050
+2026-03-31 16:31:06.932 +05:30 [INF] Request starting HTTP/2 GET https://localhost:5051/ - null null
+2026-03-31 16:31:08.232 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-31 16:31:08.444 +05:30 [INF] Hosting environment: Development
+2026-03-31 16:31:08.876 +05:30 [INF] Content root path: C:\Users\Satvik\Desktop\capg\MicroservicesAssesment\Services\PaymentService\PaymentService.API
+2026-03-31 16:31:10.227 +05:30 [INF] HTTP GET / responded 404 in 740.1227 ms
+2026-03-31 16:31:10.664 +05:30 [INF] Request finished HTTP/2 GET https://localhost:5051/ - 404 null null 3753.6649ms
+2026-03-31 16:31:11.267 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5051/, Response status code: 404
