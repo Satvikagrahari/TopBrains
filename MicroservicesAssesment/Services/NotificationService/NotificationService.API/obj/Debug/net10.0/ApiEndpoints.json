@@ -1,0 +1,50 @@
+[
+  {
+    "ContainingType": "NotificationService.API.Controllers.NotificationController",
+    "Method": "SendEmail",
+    "RelativePath": "api/v1/notifications/send-email",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "NotificationService.Application.DTOs.EmailNotificationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NotificationService.API.Controllers.NotificationController",
+    "Method": "SendSms",
+    "RelativePath": "api/v1/notifications/send-sms",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "NotificationService.Application.DTOs.SmsNotificationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NotificationService.API.Controllers.NotificationController",
+    "Method": "SendWhatsApp",
+    "RelativePath": "api/v1/notifications/send-whatsapp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "NotificationService.Application.DTOs.WhatsAppNotificationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

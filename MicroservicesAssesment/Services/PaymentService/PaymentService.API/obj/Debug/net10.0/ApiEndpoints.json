@@ -1,0 +1,65 @@
+[
+  {
+    "ContainingType": "PaymentService.API.Controllers.PaymentController",
+    "Method": "Initiate",
+    "RelativePath": "api/v1/payments/initiate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "PaymentService.Application.DTOs.PaymentRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PaymentService.API.Controllers.PaymentController",
+    "Method": "GetMyPayments",
+    "RelativePath": "api/v1/payments/my",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PaymentService.API.Controllers.PaymentController",
+    "Method": "GetByOrder",
+    "RelativePath": "api/v1/payments/order/{orderId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PaymentService.API.Controllers.PaymentController",
+    "Method": "Verify",
+    "RelativePath": "api/v1/payments/verify/{razorpayOrderId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "razorpayOrderId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "PaymentService.Application.DTOs.VerifyPaymentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
