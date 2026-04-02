@@ -1,0 +1,169 @@
+Question 1 – Normalization (Design Thinking)
+
+The Sales_Raw table violates normalization rules.
+
+Tasks:
+
+Identify at least three normalization problems
+Redesign the database into proper normalized tables (minimum 3NF)
+Write CREATE TABLE statements for the new design
+(No data migration required, only structure)
+
+
+Normalized Tables 
+
+// Created Customer Table:
+
+CREATE TABLE Customers (
+    CustomerID INT IDENTITY PRIMARY KEY,
+    CustomerName VARCHAR(100),
+    CustomerPhone VARCHAR(20),
+    CustomerCity VARCHAR(50)
+);
+
+
+// SalesPersons Table
+
+
+CREATE TABLE SalesPersons (
+    SalesPersonID INT IDENTITY PRIMARY KEY,
+    SalesPersonName VARCHAR(100)
+);
+
+
+
+//Products Table
+
+CREATE TABLE Products (
+    ProductID INT IDENTITY PRIMARY KEY,
+    ProductName VARCHAR(100),
+    UnitPrice INT
+);
+
+// Orders Table
+
+CREATE TABLE Orders (
+    OrderID INT PRIMARY KEY,
+    OrderDate DATE,
+    CustomerID INT,
+    SalesPersonID INT,
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
+    FOREIGN KEY (SalesPersonID) REFERENCES SalesPersons(SalesPersonID)
+);
+
+
+//OrderDetails Table
+
+CREATE TABLE OrderDetails (
+    OrderDetailID INT IDENTITY PRIMARY KEY,
+    OrderID INT,
+    ProductID INT,
+    Quantity INT,
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+);
+
+Question 2 – Third Highest Total Sales (Analytical Query)
+
+Each order may contain multiple products.
+
+Task:
+Write a SQL query to find the third highest total sales amount, where:
+
+Total Sales = Quantity × Unit Price (for all products in an order)
+
+Soultion:
+
+WITH OrderTotals AS (
+    SELECT 
+        OrderID,
+        SUM(CAST(q.value AS INT) * CAST(p.value AS INT)) AS TotalSales
+    FROM Sales_Raw
+    CROSS APPLY STRING_SPLIT(Quantities, ',') q
+    CROSS APPLY STRING_SPLIT(UnitPrices, ',') p
+    GROUP BY OrderID
+),
+RankedOrders AS (
+    SELECT *,
+           DENSE_RANK() OVER (ORDER BY TotalSales DESC) AS rnk
+    FROM OrderTotals
+)
+SELECT OrderID, TotalSales
+FROM RankedOrders
+WHERE rnk = 3;
+
+
+Question 3 – GROUP BY & HAVING (Business Rule)
+
+Management wants to identify salespersons who generated high revenue.
+
+Task:
+Write a query to list SalesPerson names whose total sales amount is greater than ₹60,000.
+
+Use:
+
+GROUP BY
+HAVING
+
+Solution:
+
+SELECT 
+    SalesPerson,
+    SUM(CAST(q.value AS INT) * CAST(p.value AS INT)) AS TotalSales
+FROM Sales_Raw
+CROSS APPLY STRING_SPLIT(Quantities, ',') q
+CROSS APPLY STRING_SPLIT(UnitPrices, ',') p
+GROUP BY SalesPerson
+HAVING SUM(CAST(q.value AS INT) * CAST(p.value AS INT)) > 60000;
+
+
+Question 4 – Subquery Usage
+
+The company wants to find customers who spent more than the average customer spending.
+
+Task:
+Write a query using a subquery to display:
+
+CustomerName
+Total amount spent
+Only include customers whose total spending is above the average spending of all customers.
+
+
+
+
+WITH CustomerTotals AS (
+    SELECT 
+        CustomerName,
+        SUM(CAST(q.value AS INT) * CAST(p.value AS INT)) AS TotalSpent
+    FROM Sales_Raw
+    CROSS APPLY STRING_SPLIT(Quantities, ',') q
+    CROSS APPLY STRING_SPLIT(UnitPrices, ',') p
+    GROUP BY CustomerName
+)
+SELECT *
+FROM CustomerTotals
+WHERE TotalSpent > (
+    SELECT AVG(TotalSpent) FROM CustomerTotals
+);
+
+
+Question 5 – String & Date Functions
+
+Operations team wants formatted and filtered data.
+
+Tasks:
+
+Display CustomerName in UPPERCASE
+Extract Order Month from OrderDate
+Show only orders placed in January 2026
+
+Solutions:
+
+SELECT 
+    UPPER(CustomerName) AS CustomerName,
+    MONTH(CONVERT(DATE, OrderDate)) AS OrderMonth
+FROM Sales_Raw
+WHERE 
+    YEAR(CONVERT(DATE, OrderDate)) = 2026
+    AND MONTH(CONVERT(DATE, OrderDate)) = 1;
+
